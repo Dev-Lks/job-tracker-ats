@@ -145,13 +145,13 @@ function renderBoard() {
 }
 render();
 
-// === Vagas automáticas (pipeline de scraping) — seção anexada, não altera nada acima ===
-(async function autoJobs() {
+// === Vagas automáticas (pipeline de scraping) — refreshAuto() recarrega sem reload da página ===
+async function refreshAuto() {
   const box = document.getElementById("autoJobs");
   if (!box) return;
   let data = null;
   try {
-    const res = await fetch("data/auto-jobs.json", { cache: "no-store" });
+    const res = await fetch("data/auto-jobs.json?ts=" + Date.now(), { cache: "no-store" });
     if (!res.ok) return;
     data = await res.json();
   } catch { return; } // silencioso: esconde a seção se não houver dados
@@ -159,14 +159,11 @@ render();
   if (!jobs.length) return;
   box.hidden = false;
   try {
-    if (data.updated_at) $("autoJobsUpdated").textContent =
-      "· atualizado em " + new Date(data.updated_at).toLocaleString("pt-BR");
-  } catch {}
-  try {
+    let label = data.updated_at ? "· atualizado em " + new Date(data.updated_at).toLocaleString("pt-BR") : "";
     const f = data.filters;
-    if (f && f.remoteOnly) $("autoRemote").checked = true;
-    if (f && Array.isArray(f.keywords)) $("autoJobsUpdated").textContent +=
-      ` · foco: ${f.remoteOnly ? "remoto" : "todas"} · ${f.keywords.length} keywords`;
+    if (f && f.remoteOnly) { $("autoRemote").checked = true; }
+    if (f && Array.isArray(f.keywords)) label += ` · foco: ${f.remoteOnly ? "remoto" : "todas"} · ${f.keywords.length} keywords`;
+    $("autoJobsUpdated").textContent = label;
   } catch {}
   const norm = s => (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   const levelOf = j => {
@@ -208,6 +205,14 @@ render();
       btn.disabled = true; btn.textContent = "✓ Na pipeline";
     });
   };
-  ["autoSearch", "autoLevel", "autoRemote"].forEach(id => $(id).addEventListener("input", renderAuto));
+  $("autoSearch").oninput = renderAuto;
+  $("autoLevel").oninput = renderAuto;
+  $("autoRemote").oninput = renderAuto;
   renderAuto();
-})();
+}
+refreshAuto();
+document.getElementById("btnRefreshAuto").onclick = () => {
+  const b = document.getElementById("btnRefreshAuto");
+  b.disabled = true; b.textContent = "⏳…";
+  refreshAuto().finally(() => { b.disabled = false; b.textContent = "🔄 Recarregar"; });
+};
