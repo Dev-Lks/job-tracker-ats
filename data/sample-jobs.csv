@@ -1,0 +1,4 @@
+title,company,status,url,location,remote,tags,applied_at,notes
+"Estágio Dev Fullstack","Acme Tech","applied","","Remoto","yes","React|Node.js|PostgreSQL","","Exemplo demo"
+"Estágio Frontend","Exemplo SaaS","wishlist","","São Paulo / Remoto","yes","React|TypeScript","",""
+"Dev Júnior Fullstack","Exemplo Tech","interview","","Belo Horizonte / Híbrido","no","Next.js|PostgreSQL|Docker","",""

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Job Tracker ATS — Dashboard</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand">📋 Job Tracker <span class="muted">ATS</span></div>
+  <nav><a class="active" href="index.html">Dashboard</a><a href="builder.html">Gerador de CV</a><a href="checker.html">Checker ATS</a></nav>
+</header>
+
+<div class="grid stats" id="stats"></div>
+
+<div class="toolbar">
+  <button id="btnNew">+ Nova vaga</button>
+  <button class="ghost" id="btnCSV">Importar CSV</button>
+  <button class="ghost" id="btnExpCSV">Exportar CSV</button>
+  <button class="ghost" id="btnExpJSON">Backup JSON</button>
+  <button class="ghost" id="btnReset">Resetar demo</button>
+  <span class="view-toggle"><button id="vList">☰ Lista</button><button id="vKanban">Kanban</button></span>
+  <input type="file" id="fileCSV" accept=".csv" hidden>
+</div>
+
+<div class="card">
+  <div class="filters">
+    <input id="fSearch" placeholder="🔍 Buscar cargo, empresa, tag…">
+    <select id="fStatus"><option value="">Todos status</option><option value="wishlist">Wishlist</option><option value="applied">Enviadas</option><option value="interview">Entrevista</option><option value="offer">Oferta</option><option value="rejected">Rejeitada</option></select>
+    <select id="fRemote"><option value="">Remoto? todas</option><option value="yes">Só remoto</option><option value="no">Só presencial</option></select>
+    <select id="fSort"><option value="new">Mais recentes</option><option value="company">Empresa A–Z</option><option value="status">Por status</option></select>
+  </div>
+  <div style="overflow-x:auto;margin-top:8px" id="listWrap">
+  <table><thead><tr><th>Vaga</th><th>Status</th><th>Local</th><th>Tags</th><th></th></tr></thead>
+  <tbody id="rows"></tbody></table>
+  </div>
+  <div class="kanban" id="kanban" hidden></div>
+  <p class="muted small" id="count"></p>
+</div>
+
+<div class="card" id="autoJobs" hidden>
+  <h3 style="margin:0 0 4px">🤖 Vagas automáticas <span class="muted small" id="autoJobsUpdated"></span></h3>
+  <p class="muted small" style="margin:0 0 10px">Coletadas todo dia de APIs gratuitas (Remotive + Arbeitnow). Use <b>+ Adicionar</b> pra levar pro seu pipeline.</p>
+  <div id="autoJobsList" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px"></div>
+</div>
+
+<p class="muted small">Dados salvos no navegador (localStorage). Exporte CSV/JSON pra backup. Pipeline: wishlist → applied → interview → offer (ou rejected).</p>
+</div>
+
+<dialog id="modal"><form method="dialog" id="jobForm">
+  <h3 id="mTitle">Nova vaga</h3>
+  <input id="mJobTitle" placeholder="Cargo *" required>
+  <div class="two"><input id="mCompany" placeholder="Empresa *"><input id="mLocation" placeholder="Local (ex.: Remoto)"></div>
+  <div class="two">
+    <select id="mStatus"><option value="wishlist">wishlist</option><option value="applied">applied</option><option value="interview">interview</option><option value="offer">offer</option><option value="rejected">rejected</option></select>
+    <select id="mRemote"><option value="yes">Remoto</option><option value="no">Presencial/Híbrido</option></select>
+  </div>
+  <input id="mUrl" placeholder="Link da vaga (https://…)">
+  <input id="mTags" placeholder="Tags separadas por vírgula (React, Node, SQL)">
+  <div class="two"><input id="mApplied" type="date"><input id="mNotes" placeholder="Notas"></div>
+  <div class="row"><button value="default" id="mSave">Salvar</button><button class="ghost" value="cancel" formnovalidate>Cancelar</button></div>
+</form></dialog>
+
+<script src="assets/js/store.js"></script>
+<script src="assets/js/dashboard.js"></script>
+</body>
+</html>

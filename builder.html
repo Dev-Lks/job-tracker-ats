@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gerador de CV ATS — Job Tracker</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand">📄 Gerador de CV <span class="muted">ATS-safe</span></div>
+  <nav><a href="index.html">Dashboard</a><a class="active" href="builder.html">Gerador de CV</a><a href="checker.html">Checker ATS</a></nav>
+</header>
+<div class="cols">
+  <div class="card no-print">
+    <h3 style="margin-top:0">1. Vaga alvo</h3>
+    <div class="grid" style="gap:10px">
+      <input id="jobTitle" placeholder="Cargo (ex.: Estágio Dev Fullstack)">
+      <input id="company" placeholder="Empresa">
+      <textarea id="jd" rows="7" placeholder="Cole a descrição da vaga (JD) aqui — o gerador reordena skills e sugere resumo com as keywords…"></textarea>
+      <div><label class="muted small">Resumo adaptado (editável — revise antes de enviar)</label>
+      <textarea id="summary" rows="4"></textarea></div>
+      <div class="row">
+        <button id="btnTailor">✨ Adaptar pra vaga</button>
+        <button class="ghost" id="btnCheck">Checar ATS →</button>
+        <button class="ghost" id="btnSave">Salvar variação</button>
+        <button class="ghost" id="btnPDF">⬇ Baixar PDF</button>
+      </div>
+      <p class="muted small" id="match"></p>
+    </div>
+    <h3>2. Perfil base <span class="muted small">(edita data/profile.json)</span></h3>
+    <p class="muted small">Layout single-column, sem tabela/foto/gráfico — o que o ATS parseia sem erro. Fonte serifada no corpo, sans no título.</p>
+  </div>
+  <div class="card"><div class="resume" id="preview"></div></div>
+</div>
+</div>
+<script src="assets/js/ats.js"></script>
+<script src="assets/js/builder.js"></script>
+</body>
+</html>

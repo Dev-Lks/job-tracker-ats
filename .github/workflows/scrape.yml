@@ -1,0 +1,27 @@
+name: Scrape vagas
+
+on:
+  schedule:
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: node scripts/scrape.mjs
+      - name: Commit data/auto-jobs.json se mudou
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/auto-jobs.json
+          if ! git diff --quiet --cached; then
+            git commit -m "chore: atualiza vagas automáticas"
+            git push
+          else
+            echo "sem mudanças em data/auto-jobs.json"
+          fi

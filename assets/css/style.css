@@ -1,0 +1,70 @@
+:root{
+  --bg:#0b0e14; --card:#121826; --border:#1f2a3d; --fg:#e8edf5; --muted:#93a1b8;
+  --accent:#5b8cff; --green:#34d399; --yellow:#fbbf24; --red:#f87171;
+  --radius:12px; --max:1080px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 -apple-system,"Segoe UI",Roboto,Inter,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:24px 16px 64px}
+header.top{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:20px}
+.brand{font-weight:800;font-size:20px;letter-spacing:.2px}
+nav{display:flex;gap:8px;flex-wrap:wrap}
+nav a{padding:8px 14px;border:1px solid var(--border);border-radius:999px;color:var(--fg);font-size:14px}
+nav a.active,nav a:hover{border-color:var(--accent);color:#fff}
+.grid{display:grid;gap:12px}
+.stats{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px}
+.stat b{font-size:26px;display:block}
+.stat span{color:var(--muted);font-size:13px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+input,select,textarea{background:#0d1320;border:1px solid var(--border);color:var(--fg);border-radius:10px;padding:10px 12px;font:inherit;width:100%}
+input:focus,select:focus,textarea:focus{outline:1px solid var(--accent);border-color:var(--accent)}
+button{background:var(--accent);border:0;color:#fff;border-radius:10px;padding:10px 16px;font:inherit;font-weight:600;cursor:pointer}
+button.ghost{background:transparent;border:1px solid var(--border);color:var(--fg)}
+button.small{padding:6px 10px;font-size:13px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--border);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.4px}
+.pill{display:inline-block;padding:3px 10px;border-radius:999px;font-size:12px;border:1px solid var(--border)}
+.p-wishlist{color:#c4b5fd;border-color:#6d5ef0}.p-applied{color:#93c5fd;border-color:#3b82f6}
+.p-interview{color:#fcd34d;border-color:#b45309}.p-offer{color:#6ee7b7;border-color:#059669}
+.p-rejected{color:#fca5a5;border-color:#dc2626}
+.filters{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:8px}
+@media(max-width:720px){.filters{grid-template-columns:1fr 1fr}}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+dialog{background:var(--card);color:var(--fg);border:1px solid var(--border);border-radius:14px;max-width:560px;width:92vw;padding:0}
+dialog form{padding:20px;display:grid;gap:10px}
+dialog h3{margin:0 0 4px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:860px){.cols{grid-template-columns:1fr}}
+.score{font-size:44px;font-weight:800}
+.bar{height:10px;background:#0d1320;border-radius:99px;overflow:hidden;border:1px solid var(--border)}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--red),var(--yellow),var(--green));width:0}
+.fix{border-left:3px solid var(--yellow);padding:6px 10px;margin:6px 0;background:#0d1320;border-radius:0 8px 8px 0;font-size:14px}
+.fix.ok{border-color:var(--green)}
+.muted{color:var(--muted)} .small{font-size:13px}
+/* ---- kanban ---- */
+.view-toggle{display:inline-flex;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.view-toggle button{border-radius:0;background:transparent;color:var(--muted);border:0}
+.view-toggle button.on{background:var(--accent);color:#fff}
+.kanban{display:grid;grid-template-columns:repeat(5,minmax(190px,1fr));gap:10px;overflow-x:auto;margin-top:8px}
+.kcol{background:#0d1320;border:1px solid var(--border);border-radius:var(--radius);padding:10px;min-height:120px}
+.kcol h4{margin:2px 2px 10px;font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
+.kcard{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px;margin-bottom:8px;font-size:13px}
+.kcard b{display:block}
+.kcard .mv{display:flex;gap:4px;margin-top:8px;flex-wrap:wrap}
+/* ---- resume preview: ATS-safe, single column, print clean ---- */
+.resume{background:#fff;color:#111;border-radius:8px;padding:40px 44px;font:13.5px/1.5 Georgia,"Times New Roman",serif}
+.resume h1{font-size:24px;margin:0;font-family:Arial,Helvetica,sans-serif}
+.resume h2{font-size:13px;text-transform:uppercase;letter-spacing:1px;border-bottom:1px solid #333;padding-bottom:3px;margin:18px 0 8px;font-family:Arial,Helvetica,sans-serif}
+.resume p,.resume li{font-size:13.5px}
+.resume ul{margin:4px 0;padding-left:20px}
+@media print{
+  @page{margin:14mm}
+  body{background:#fff} header.top,nav,.toolbar,.filters,.no-print{display:none!important}
+  .wrap{max-width:none;padding:0} .card{border:0;padding:0}
+  .resume{border-radius:0;padding:0}
+}

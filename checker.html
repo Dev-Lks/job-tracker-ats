@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checker ATS — Job Tracker</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand">✅ Checker <span class="muted">ATS simples</span></div>
+  <nav><a href="index.html">Dashboard</a><a href="builder.html">Gerador de CV</a><a class="active" href="checker.html">Checker ATS</a></nav>
+</header>
+<div class="cols">
+  <div class="card">
+    <label class="muted small">Texto do currículo (cole do PDF ou do gerador)</label>
+    <textarea id="resume" rows="14" placeholder="Cole aqui o texto do currículo…"></textarea>
+    <label class="muted small" style="margin-top:10px;display:block">Descrição da vaga (JD) — opcional, mas vale 25 pts</label>
+    <textarea id="jd" rows="7" placeholder="Cole a JD…"></textarea>
+    <div class="row" style="margin-top:10px"><button id="btnGo">Analisar</button><button class="ghost" id="btnSample">Usar meu CV de exemplo</button></div>
+    <p class="muted small">100% no navegador. Nada é enviado pra servidor.</p>
+  </div>
+  <div class="card">
+    <div class="score" id="score">–</div>
+    <div class="muted" id="grade">Aguardando análise…</div>
+    <div class="bar" style="margin:12px 0"><i id="bar"></i></div>
+    <div class="grid two small muted" id="meta"></div>
+    <h4>Correções</h4><div id="fixes"></div>
+    <h4>Keywords da vaga</h4>
+    <p class="small"><span style="color:var(--green)" id="kwOk"></span></p>
+    <p class="small muted" id="kwMiss"></p>
+  </div>
+</div>
+</div>
+<script src="assets/js/ats.js"></script>
+<script>
+const $ = id => document.getElementById(id);
+function run() {
+  const r = checkATS($("resume").value, $("jd").value);
+  $("score").textContent = r.score + "/100";
+  $("grade").textContent = r.grade;
+  $("bar").style.width = r.score + "%";
+  $("meta").innerHTML = `<div>${r.words} palavras</div><div>${r.bullets} bullets</div><div>${r.matched.length}/${r.keywords.length} keywords</div><div>${r.fixes.length} ajustes</div>`;
+  $("fixes").innerHTML = r.fixes.length
+    ? r.fixes.map(f => `<div class="fix">${f}</div>`).join("")
+    : `<div class="fix ok">Tudo certo — currículo pronto pra enviar. 🎉</div>`;
+  $("kwOk").textContent = r.matched.join(", ");
+  $("kwMiss").textContent = r.missing.length ? "Faltam: " + r.missing.slice(0, 12).join(", ") : "";
+}
+$("btnGo").onclick = run;
+$("btnSample").onclick = async () => {
+  const load = async f => { const r = await fetch(f); if (!r.ok) throw 0; return r.json(); };
+  const p = await load("data/profile.json").catch(() => load("data/profile.example.json"));
+  $("resume").value = [p.name, p.email, p.phone, "", p.summary, "",
+    "Habilidades: " + [...p.languages, ...p.skills].join(", "), "",
+    ...p.experience.flatMap(e => [e.role + " — " + e.company, ...e.bullets, ""]),
+    ...p.projects.flatMap(pr => [pr.name, ...pr.bullets, ""]),
+    ...p.education.map(e => e.course + " — " + e.school)].join("\n");
+  run();
+};
+// vindo do builder
+try {
+  const pre = JSON.parse(sessionStorage.getItem("jta.check") || "null");
+  if (pre) { $("resume").value = pre.text; $("jd").value = pre.jd; sessionStorage.removeItem("jta.check"); run(); }
+} catch {}
+$("resume").addEventListener("input", () => {});
+</script>
+</body>
+</html>

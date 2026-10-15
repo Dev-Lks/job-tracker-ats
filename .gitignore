@@ -1,0 +1,5 @@
+.DS_Store
+Thumbs.db
+*.log
+# Perfil real: só local, nunca commitar (demo usa profile.example.json)
+data/profile.json
