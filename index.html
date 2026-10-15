@@ -42,11 +42,14 @@
 <div class="card" id="autoJobs" hidden>
   <h3 style="margin:0 0 4px">🤖 Vagas automáticas <span class="muted small" id="autoJobsUpdated"></span>
     <button class="ghost small" id="btnRefreshAuto" style="margin-left:8px">🔄 Recarregar</button></h3>
-  <p class="muted small" style="margin:0 0 10px">Coletadas todo dia de APIs gratuitas (Remotive + Arbeitnow). Use <b>+ Adicionar</b> pra levar pro seu pipeline.</p>
+  <p class="muted small" style="margin:0 0 10px">Coletadas todo dia (APIs + browser: GitHub, LinkedIn, Gupy…). Use <b>+ Adicionar</b> pra levar pro seu pipeline.</p>
   <div class="auto-filters">
-    <input id="autoSearch" placeholder="Filtrar automáticas…" style="max-width:220px">
-    <select id="autoLevel" style="max-width:150px"><option value="">Nível: todos</option><option value="estagio">Estágio</option><option value="junior">Júnior</option><option value="outro">Outro</option></select>
+    <input id="autoSearch" placeholder="Filtrar automáticas…" style="max-width:200px">
+    <select id="autoLevel" style="max-width:140px"><option value="">Nível: todos</option><option value="estagio">Estágio</option><option value="junior">Júnior</option><option value="outro">Outro</option></select>
+    <select id="autoSource" style="max-width:150px"><option value="">Fonte: todas</option></select>
+    <select id="autoSort" style="max-width:150px"><option value="new">Recentes</option><option value="company">Empresa A–Z</option></select>
     <label class="muted small" style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="autoRemote"> só remoto</label>
+    <label class="muted small" style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="autoBR"> só BR</label>
   </div>
   <div id="autoJobsList" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px"></div>
 </div>

@@ -166,6 +166,8 @@ async function refreshAuto() {
     $("autoJobsUpdated").textContent = label;
   } catch {}
   const norm = s => (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const BR_RE = /brasil|brazil|home office Brasil|sao paulo|rio de janeiro|belo horizonte|brasilia|curitiba|porto alegre|florianopolis|recife|fortaleza|salvador|goiania|campinas|\bbr\b|\bsp\b|\brj\b|\bmg\b|\brs\b|\bpr\b|\bsc\b|\bba\b|\bdf\b|\bgo\b|\bpe\b|\bce\b/;
+  const isBR = j => BR_RE.test(norm(`${j.location} ${(j.tags || []).join(" ")}`));
   const levelOf = j => {
     const h = norm([j.title, (j.tags || []).join(" ")].join(" "));
     if (/estag|intern|trainee/.test(h)) return "estagio";
@@ -174,17 +176,33 @@ async function refreshAuto() {
   };
   const inPipe = u => u && db.jobs.some(j => j.url && j.url === u);
   const list = $("autoJobsList");
+  // opções de fonte (1x)
+  try {
+    const srcs = [...new Set(jobs.map(j => j.source || "outra"))].sort();
+    const sel = $("autoSource");
+    if (sel.options.length <= 1) for (const s of srcs) {
+      const o = document.createElement("option"); o.value = s; o.textContent = s; sel.appendChild(o);
+    }
+  } catch {}
   const renderAuto = () => {
     const q = norm($("autoSearch").value);
     const lv = $("autoLevel").value;
+    const src = $("autoSource").value;
+    const sort = $("autoSort").value;
     const rm = $("autoRemote").checked;
+    const br = $("autoBR").checked;
     const vis = jobs.filter(j => {
       if (rm && !j.remote) return false;
+      if (br && !isBR(j)) return false;
+      if (src && (j.source || "outra") !== src) return false;
       if (lv && levelOf(j) !== lv) return false;
       if (q && !norm(`${j.title} ${j.company} ${(j.tags || []).join(" ")}`).includes(q)) return false;
       return true;
-    }).slice(0, 20);
-    list.innerHTML = vis.map(j => {
+    });
+    if (sort === "company") vis.sort((a, b) => String(a.company || "").localeCompare(String(b.company || "")));
+    else vis.sort((a, b) => String(b.published_at || "").localeCompare(String(a.published_at || "")));
+    const page = vis.slice(0, 30);
+    list.innerHTML = page.map(j => {
       const i = jobs.indexOf(j);
       return `<div class="kcard"><b>${esc(j.title)}</b><span class="muted">${esc(j.company)}</span><br>`
       + `<span class="muted small">${j.remote ? "remoto · " : ""}${esc(j.location || "")}${(j.tags || []).length ? " · " + esc(j.tags.slice(0, 4).join(", ")) : ""}</span>`
@@ -208,6 +226,9 @@ async function refreshAuto() {
   $("autoSearch").oninput = renderAuto;
   $("autoLevel").oninput = renderAuto;
   $("autoRemote").oninput = renderAuto;
+  $("autoSource").oninput = renderAuto;
+  $("autoSort").oninput = renderAuto;
+  $("autoBR").oninput = renderAuto;
   renderAuto();
 }
 refreshAuto();
