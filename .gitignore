@@ -7,4 +7,6 @@ data/profile.json
 scripts/.env
 data/seen.json
 data/decisions.json
+data/bot-jobs.json
 out/
+scripts/bot_scrape/.profile/

@@ -88,6 +88,11 @@ ok(got.startsWith('"title","company","status"'), "exportCSV gera cabeçalho");
   const g1 = sc.normalizeGithubIssue("x/vagas", { number: 1, title: "[Remoto] Mobile Engineer (Strider USD)", labels: [{ name: "Remoto" }, { name: "Júnior" }], html_url: "https://x/1", created_at: "2026-01-01" });
   ok(g1.title === "Mobile Engineer" && g1.remote === true && g1.source === "github", "normalizeGithubIssue limpa título e detecta remoto");
   ok(sc.githubKeep(g1) === true, "githubKeep aprova júnior remoto");
+  // merge do browser (Camoufox): mesmo portão das APIs
+  const b1 = sc.botKeep({ id: "linkedin-1", title: "Estágio Frontend React", company: "Acme", url: "https://x/1", location: "Remoto", remote: true, tags: [], source: "linkedin" });
+  ok(b1 && b1.source === "linkedin", "botKeep aprova vaga tech válida");
+  ok(sc.botKeep({ title: "Office Assistant", url: "https://x/2", tags: ["admin"] }) === null, "botKeep barra não-tech");
+  ok(sc.botKeep({ title: "Estágio React" }) === null, "botKeep exige URL");
   sc.configure(); // volta pros defaults
   // tailor: rank + CV adaptado
   const tl = await import("../scripts/tailor.mjs");

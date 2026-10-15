@@ -17,5 +17,8 @@
   "remoteOnly": true,
   "sources": ["github", "remotive", "arbeitnow", "adzuna"],
   "remotiveCategories": ["software-dev", "data", "devops"],
+  "githubRepos": ["frontendbr/vagas", "backend-br/vagas", "react-brasil/vagas", "phpdevbr/vagas", "androiddevbr/vagas"],
+  "botQueries": ["react intern", "estágio frontend", "desenvolvedor júnior", "estágio backend python"],
+  "botMaxPages": 3,
   "limit": 100
 }

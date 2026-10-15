@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-15T11:30:17.845Z",
-  "count": 13,
+  "updated_at": "2026-10-15T12:12:24.899Z",
+  "count": 41,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -97,6 +97,28 @@
       "published_at": "2026-10-14T17:40:23.000Z"
     },
     {
+      "id": "gupy-4650003725",
+      "title": "Desenvolvedor Java Fullstack",
+      "company": "Certsys",
+      "url": "https://certsys.gupy.io/job/eyJqb2JJZCI6MTI3MjQ0OTQsInNvdXJjZSI6Imd1cHlfcG9ydGFsIn0=",
+      "location": "Não informado",
+      "remote": true,
+      "tags": [],
+      "source": "gupy",
+      "published_at": "2026-10-14"
+    },
+    {
+      "id": "linkedin-382797095",
+      "title": "Frontend Programmer Intern",
+      "company": "Epic Games",
+      "url": "https://www.linkedin.com/jobs/view/frontend-programmer-intern-at-epic-games-4460071117",
+      "location": "Cary, Carolina do Norte, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-10-14"
+    },
+    {
       "id": "github-backend-br-vagas-12444",
       "title": "Dev java junior",
       "company": "DB1",
@@ -118,6 +140,17 @@
       ],
       "source": "github",
       "published_at": "2026-10-13T19:51:25Z"
+    },
+    {
+      "id": "linkedin-6580374367",
+      "title": "Software Engineer Backend Intern (Summer 2027)",
+      "company": "Astranis Space Technologies",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-backend-intern-summer-2027-at-astranis-space-technologies-4469095635",
+      "location": "San Francisco, Califórnia, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-10-14"
     },
     {
       "id": "github-backend-br-vagas-12442",
@@ -144,6 +177,17 @@
       "published_at": "2026-10-10T19:44:18Z"
     },
     {
+      "id": "linkedin-521303591",
+      "title": "Software Engineer Intern - Backend Focused - Summer 2027",
+      "company": "Rippling",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-backend-focused-summer-2027-at-rippling-4470482865",
+      "location": "Nova York, Nova York, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-10-14"
+    },
+    {
       "id": "github-backend-br-vagas-12441",
       "title": "Full Stack Developer",
       "company": "Cogfy",
@@ -168,6 +212,17 @@
       "published_at": "2026-10-09T15:07:16Z"
     },
     {
+      "id": "linkedin-9484956538",
+      "title": "Python Developer Internship - Summer 2027",
+      "company": "Medpace",
+      "url": "https://www.linkedin.com/jobs/view/python-developer-internship-summer-2027-at-medpace-4478180378",
+      "location": "Cincinnati, Ohio, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-10-13"
+    },
+    {
       "id": "github-frontendbr-vagas-8566",
       "title": "Full-stack Engineer React.js • UX Design • Node.js",
       "company": "Strider",
@@ -182,6 +237,17 @@
       ],
       "source": "github",
       "published_at": "2026-10-07T14:03:28Z"
+    },
+    {
+      "id": "linkedin-5370406829",
+      "title": "Digital Services Web and Mobile Development Internship Summer 2027",
+      "company": "Corewell Health",
+      "url": "https://www.linkedin.com/jobs/view/digital-services-web-and-mobile-development-internship-summer-2027-at-corewell-health-4477943165",
+      "location": "Grands Rapids, Michigan, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-10-12"
     },
     {
       "id": "github-backend-br-vagas-12432",
@@ -200,6 +266,17 @@
       "published_at": "2026-09-23T17:03:05Z"
     },
     {
+      "id": "linkedin-7254603061",
+      "title": "Frontend Engineer / Intern (React Stack)",
+      "company": "AI on the Hill",
+      "url": "https://www.linkedin.com/jobs/view/frontend-engineer-intern-react-stack-at-ai-on-the-hill-4475203712",
+      "location": "Princeton, Nova Jersey, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-10-09"
+    },
+    {
       "id": "github-androiddevbr-vagas-2248",
       "title": "Mobile Engineer",
       "company": "",
@@ -211,6 +288,17 @@
       ],
       "source": "github",
       "published_at": "2026-09-19T13:49:29Z"
+    },
+    {
+      "id": "linkedin-853052416",
+      "title": "Frontend Software Engineering Intern 2027",
+      "company": "Verkada",
+      "url": "https://www.linkedin.com/jobs/view/frontend-software-engineering-intern-2027-at-verkada-4459077236",
+      "location": "San Mateo, Califórnia, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-10-07"
     },
     {
       "id": "github-frontendbr-vagas-8563",
@@ -227,8 +315,19 @@
       "published_at": "2026-09-17T18:59:30Z"
     },
     {
+      "id": "linkedin-368019458",
+      "title": "Backend Software Engineering Intern 2027",
+      "company": "Verkada",
+      "url": "https://www.linkedin.com/jobs/view/backend-software-engineering-intern-2027-at-verkada-4459086087",
+      "location": "San Mateo, Califórnia, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-10-07"
+    },
+    {
       "id": "github-frontendbr-vagas-8552",
-      "title": "Full-stack Engineer (UX (focused) Strider",
+      "title": "Full-stack Engineer",
       "company": "",
       "url": "https://github.com/frontendbr/vagas/issues/8552",
       "location": "Remoto",
@@ -240,6 +339,17 @@
       ],
       "source": "github",
       "published_at": "2026-08-28T01:40:18Z"
+    },
+    {
+      "id": "linkedin-1504377342",
+      "title": "Frontend Engineer Project Intern (TikTok Multimedia Arch) - 2026 (BS/MS)",
+      "company": "TikTok",
+      "url": "https://www.linkedin.com/jobs/view/frontend-engineer-project-intern-tiktok-multimedia-arch-2026-bs-ms-at-tiktok-4432695583",
+      "location": "San José, Califórnia, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-09-30"
     },
     {
       "id": "github-react-brasil-vagas-3019",
@@ -256,27 +366,15 @@
       "published_at": "2026-07-10T20:36:53Z"
     },
     {
-      "id": "github-backend-br-vagas-12245",
-      "title": "Full-stack Engineer",
-      "company": "",
-      "url": "https://github.com/backend-br/vagas/issues/12245",
-      "location": "Remoto · ASP",
+      "id": "linkedin-1568273677",
+      "title": "Frontend Engineer Intern (Ads Interface) - 2027 Summer",
+      "company": "TikTok",
+      "url": "https://www.linkedin.com/jobs/view/frontend-engineer-intern-ads-interface-2027-summer-at-tiktok-4450388003",
+      "location": "San José, Califórnia, Estados Unidos",
       "remote": true,
-      "tags": [
-        ".NET",
-        "Remoto",
-        "AWS",
-        "SQL",
-        "Git",
-        "ASP",
-        "Stale",
-        "CI/CD",
-        "react",
-        "full-stack",
-        "remoto"
-      ],
-      "source": "github",
-      "published_at": "2026-05-25T16:54:47Z"
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-09-30"
     },
     {
       "id": "github-phpdevbr-vagas-1323",
@@ -291,6 +389,204 @@
       ],
       "source": "github",
       "published_at": "2026-01-13T14:23:29Z"
+    },
+    {
+      "id": "linkedin-9164490141",
+      "title": "Backend Software Engineer Intern (TikTok-Growth-Innovative Growth) - 2027 Summer",
+      "company": "TikTok",
+      "url": "https://www.linkedin.com/jobs/view/backend-software-engineer-intern-tiktok-growth-innovative-growth-2027-summer-at-tiktok-4447915147",
+      "location": "San José, Califórnia, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-09-30"
+    },
+    {
+      "id": "linkedin-6008146059",
+      "title": "Backend Software Engineer Intern (Global E-Commerce) - 2027 Summer",
+      "company": "TikTok",
+      "url": "https://www.linkedin.com/jobs/view/backend-software-engineer-intern-global-e-commerce-2027-summer-at-tiktok-4446293082",
+      "location": "San José, Califórnia, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-09-29"
+    },
+    {
+      "id": "linkedin-4086174436",
+      "title": "Junior Backend Java Developer- Enterprise Payments and Credit Card",
+      "company": "Huntington National Bank",
+      "url": "https://www.linkedin.com/jobs/view/junior-backend-java-developer-enterprise-payments-and-credit-card-at-huntington-national-bank-4463641021",
+      "location": "Minnetonka, Minesota, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-09-26"
+    },
+    {
+      "id": "linkedin-8716625721",
+      "title": "Software Engineer Internship, Frontend",
+      "company": "Ramp",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-internship-frontend-at-ramp-4469637742",
+      "location": "Nova York, Nova York, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-09-24"
+    },
+    {
+      "id": "linkedin-725967483",
+      "title": "Associate Software Engineer- Java full stack",
+      "company": "REI Systems",
+      "url": "https://www.linkedin.com/jobs/view/associate-software-engineer-java-full-stack-at-rei-systems-4471637029",
+      "location": "Sterling, Virgínia, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-09-24"
+    },
+    {
+      "id": "linkedin-2374936002",
+      "title": "Software Engineering Intern, Backend",
+      "company": "Ramp",
+      "url": "https://www.linkedin.com/jobs/view/software-engineering-intern-backend-at-ramp-4469628984",
+      "location": "Nova York, Nova York, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-09-24"
+    },
+    {
+      "id": "linkedin-1182915344",
+      "title": "Software Engineer Full Stack / Backend II (Intern) – United States",
+      "company": "Cisco",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-full-stack-backend-ii-intern-%E2%80%93-united-states-at-cisco-4471611684",
+      "location": "Milpitas, Califórnia, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-09-24"
+    },
+    {
+      "id": "linkedin-6605079352",
+      "title": "Spring 2027 Backend Software Engineering Intern",
+      "company": "U.S. Hunger",
+      "url": "https://www.linkedin.com/jobs/view/spring-2027-backend-software-engineering-intern-at-u-s-hunger-4467919932",
+      "location": "Longwood, Flórida, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-09-16"
+    },
+    {
+      "id": "linkedin-6780599858",
+      "title": "Paid Internship -- Software Development -- React",
+      "company": "Interco",
+      "url": "https://www.linkedin.com/jobs/view/paid-internship-software-development-react-at-interco-4465537526",
+      "location": "Saint Louis, Missouri, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-09-15"
+    },
+    {
+      "id": "linkedin-903868167",
+      "title": "Frontend Developer Internship — React & Restaurant Backoffice",
+      "company": "ZOVU",
+      "url": "https://www.linkedin.com/jobs/view/frontend-developer-internship-%E2%80%94-react-restaurant-backoffice-at-zovu-4465700146",
+      "location": "Los Angeles, Califórnia, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-09-13"
+    },
+    {
+      "id": "linkedin-3927461895",
+      "title": "Intern Front-End Developer (Angular)",
+      "company": "digest.pro",
+      "url": "https://www.linkedin.com/jobs/view/intern-front-end-developer-angular-at-digest-pro-4460607982",
+      "location": "Enterprise, Nevada, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-09-01"
+    },
+    {
+      "id": "linkedin-278267663",
+      "title": "Frontend Developer Intern",
+      "company": "Ur Technology and Computers",
+      "url": "https://www.linkedin.com/jobs/view/frontend-developer-intern-at-ur-technology-and-computers-4461227423",
+      "location": "Condado de Marion, Indiana, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-08-31"
+    },
+    {
+      "id": "linkedin-6178015244",
+      "title": "Engineering Intern - Python and Web (AI human in the loop)",
+      "company": "Foodini",
+      "url": "https://www.linkedin.com/jobs/view/engineering-intern-python-and-web-ai-human-in-the-loop-at-foodini-4446459349",
+      "location": "Los Angeles, Califórnia, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-08-12"
+    },
+    {
+      "id": "linkedin-3852014200",
+      "title": "Frontend Intern (React)",
+      "company": "Pipevia",
+      "url": "https://www.linkedin.com/jobs/view/frontend-intern-react-at-pipevia-4448592454",
+      "location": "Nova York, Nova York, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-08-04"
+    },
+    {
+      "id": "linkedin-7158184948",
+      "title": "Backend Developer Intern",
+      "company": "Chrono Efficient",
+      "url": "https://www.linkedin.com/jobs/view/backend-developer-intern-at-chrono-efficient-4448316919",
+      "location": "Johannesburg, Califórnia, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-08-03"
+    },
+    {
+      "id": "linkedin-6583024853",
+      "title": "Software Engineer Intern - Python, Summer 2027",
+      "company": "Akuna Capital",
+      "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-python-summer-2027-at-akuna-capital-4440301484",
+      "location": "Chicago, Ilinóis, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-07-13"
+    },
+    {
+      "id": "linkedin-146706716",
+      "title": "💻 Software Development Internship – JavaScrip",
+      "company": "Kenmore Design LLC",
+      "url": "https://www.linkedin.com/jobs/view/%F0%9F%92%BB-software-development-internship-%E2%80%93-javascrip-at-kenmore-design-llc-4430627255",
+      "location": "Malta, Nova York, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-06-26"
+    },
+    {
+      "id": "linkedin-4841070007",
+      "title": "Junior Java Software Engineer",
+      "company": "BeaconFire Inc.",
+      "url": "https://www.linkedin.com/jobs/view/junior-java-software-engineer-at-beaconfire-inc-4361869616",
+      "location": "Nova Jersey, Estados Unidos",
+      "remote": true,
+      "tags": [],
+      "source": "linkedin",
+      "published_at": "2026-03-26"
     }
   ]
 }

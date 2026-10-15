@@ -102,6 +102,32 @@ pulando URLs já presentes).
 > `ADZUNA_APP_ID` + `ADZUNA_APP_KEY` no `scripts/.env` (ou Secrets no Actions) pra cobrir
 > vagas brasileiras. Gupy/LinkedIn não têm API pública — cadastre manual (ou CSV).
 
+## Scraper browser (Camoufox) — LinkedIn, Gupy
+
+APIs não cobrem tudo: o `scripts/bot_scrape/` usa **Camoufox** (Firefox stealth) pra coletar
+**LinkedIn** (busca pública, filtro remoto + estágio/entry, sem login) e **Gupy**
+(`portal.gupy.io`, com empresa/local/modalidade). Sai em `data/bot-jobs.json` (local,
+gitignored) e o `scrape.mjs` mescla no `auto-jobs.json` com os mesmos portões.
+
+```bash
+# setup 1x (Python 3.13+)
+python -m pip install -r scripts/bot_scrape/requirements.txt
+python -m camoufox fetch   # baixa o Firefox stealth
+
+# uso
+PY scripts/bot_scrape/run.py --once --pages 2   # linkedin+gupy -> bot-jobs.json
+PY scripts/bot_scrape/run.py --once --source gupy
+PY scripts/bot_scrape/run.py --headed           # mostra o navegador (login manual 1x, salva no perfil)
+PY scripts/bot_scrape/run.py --probe <url>      # inspeciona site novo
+PY scripts/bot_scrape/test_smoke.py             # 10 testes, sem rede
+```
+
+Notas honestas: **InHire não tem board público** (`inhire.com.br` é ATS pra empresas, não
+lista vagas) — se você usa outro InHire, me manda a URL que eu adapto. TramparDeCasa tem
+links `href="#"` com paywall — sem URL estável, fora. LinkedIn às vezes levanta authwall
+depois de N páginas: o scraper para a query com o que coletou. Perfil persistente em
+`scripts/bot_scrape/.profile/` (gitignored) — logue 1x no `--headed` se um dia precisar.
+
 ## Monitor Telegram 24/7 (aprovação + CV automático)
 
 Fluxo: a cada 6h o `scripts/watch.mjs` roda o scrape, rankeia (estágio +40, júnior +25,

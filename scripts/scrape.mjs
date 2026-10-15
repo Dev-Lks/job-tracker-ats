@@ -182,13 +182,17 @@ export function normalizeGithubIssue(repo, issue = {}) {
   const has = (list) => list.some((k) => low.includes(k));
   const rawTitle = String(issue.title || "Sem título").trim();
   const company = extractCompany(rawTitle);
-  const title = rawTitle
+  let title = rawTitle
     .replace(/^\[[^\]]+\]\s*/, "")
     .replace(/\s*@\s*[^@|•\-–—(]+$/, "")
     .replace(/\s+[-–—•]\s*[^\-–—•(]{1,40}$/, (m) => (/react|node|python|java|php|dev|front|back|full|mobile|dados|data|qa/i.test(m) ? m : ""))
     .replace(/\s*\([^()]*\)\s*$/, "") // sufixo "(Strider)/(USD)" é metadado, não título
     .replace(/\s+[-–—]\s*(USD|BRL|EUR|R\$)\s*$/i, "")
     .trim();
+  // parêntese desbalanceado ("(UX (focused) Strider"): corta do primeiro " (" em diante
+  if ((title.match(/\(/g) || []).length !== (title.match(/\)/g) || []).length) {
+    title = (title.split(" (")[0] || title).trim();
+  }
   const remote = has(GH_REMOTE) || /\[remoto\]|\(remoto\)|remoto/i.test(rawTitle);
   const tags = [...new Set([...labels.filter((l) => l.length <= 20).slice(0, 8), ...matchedKeywords(rawTitle + " " + labels.join(" "))])].slice(0, 12);
   return {
@@ -203,6 +207,25 @@ export function normalizeGithubIssue(repo, issue = {}) {
     published_at: String(issue.created_at || ""),
     _labels: labels,
   };
+}
+// Vagas do browser (Camoufox -> data/bot-jobs.json): mesmo portão das APIs
+export function botKeep(b = {}) {
+  const job = {
+    id: String(b.id || `bot-${Date.now()}`),
+    title: String(b.title || "Sem título").trim(),
+    company: String(b.company || "").trim(),
+    url: String(b.url || ""),
+    location: String(b.location || "").trim(),
+    remote: Boolean(b.remote),
+    tags: Array.isArray(b.tags) ? b.tags.map(String).slice(0, 12) : [],
+    source: String(b.source || "bot"),
+    published_at: String(b.published_at || ""),
+  };
+  if (!job.url) return null;
+  if (!matchesKeywords(job.title)) return null;
+  if (!matchesTech([job.title, job.tags.join(" ")].join(" "))) return null;
+  if (titleBlocked(job.title)) return null;
+  return job;
 }
 export function githubKeep(n) {
   const labels = (n._labels || []).join(" ").toLowerCase();
@@ -349,6 +372,17 @@ async function main() {
   }
 
   // dedupe por url (sem url, vale o id) — remoteOnly filtra antes
+  // + mescla do browser (Camoufox -> data/bot-jobs.json, se existir)
+  try {
+    const rawBot = JSON.parse(readFileSync(join(ROOT, "data", "bot-jobs.json"), "utf8"));
+    const list = Array.isArray(rawBot.jobs) ? rawBot.jobs : [];
+    let kept = 0;
+    for (const b of list) {
+      const job = botKeep(b);
+      if (job) { all.push(job); kept++; }
+    }
+    console.log(`bot: ${kept} aproveitadas de ${list.length} (data/bot-jobs.json)`);
+  } catch { /* sem arquivo = sem browser scrape, segue o jogo */ }
   const pool = cfg.remoteOnly ? all.filter((j) => j.remote) : all;
   const seen = new Set();
   const seenTitle = new Set();
@@ -356,9 +390,10 @@ async function main() {
   for (const j of pool) {
     const key = (j.url && j.url.trim()) || j.id;
     if (!key || seen.has(key)) continue;
-    // GitHub: mesma vaga repostada em N issues (ex.: 5x "Strider") — 1ª vence
-    if (j.source === "github") {
-      const tk = strip(j.title).replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim().slice(0, 45);
+    // GitHub/LinkedIn: mesma vaga repostada N vezes — 1ª vence (título+empresa)
+    if (j.source === "github" || j.source === "linkedin" || j.source === "gupy") {
+      const tk = j.source + ":" + strip(j.title).replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim().slice(0, 45)
+        + "|" + strip(j.company).slice(0, 30);
       if (seenTitle.has(tk)) continue;
       seenTitle.add(tk);
     }
