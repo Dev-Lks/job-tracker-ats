@@ -78,6 +78,16 @@ ok(got.startsWith('"title","company","status"'), "exportCSV gera cabeçalho");
   // Adzuna BR
   const z = sc.normalizeAdzuna({ id: 123, title: "<strong>Estágio React</strong>", company: { display_name: "Acme BR" }, location: { display_name: "São Paulo, Brasil" }, redirect_url: "https://x", category: { label: "IT" }, created: "2026-10-01T00:00:00Z", description: "home office" });
   ok(z.source === "adzuna" && z.remote === true && z.title === "Estágio React", "normalizeAdzuna OK (limpa HTML, detecta remoto BR)");
+  // GitHub BR: empresa extraída, duplicadas colapsadas
+  ok(sc.extractCompany("[Remoto] Dev Java Junior @ DB1") === "DB1", "extractCompany com @");
+  ok(sc.extractCompany("Full-stack Engineer (Strider)") === "Strider", "extractCompany com parênteses");
+  ok(sc.extractCompany("Backend Developer PHP/Laravel na Coodesh") === "Coodesh", "extractCompany com 'na'");
+  ok(sc.extractCompany("Dev java junior - DB1") === "DB1", "extractCompany com hífen");
+  ok(sc.matchesTech("Remote Office Assistant") === false, "matchesTech barra não-tech");
+  ok(sc.matchesTech("Frontend Engineer React") === true, "matchesTech aprova tech");
+  const g1 = sc.normalizeGithubIssue("x/vagas", { number: 1, title: "[Remoto] Mobile Engineer (Strider USD)", labels: [{ name: "Remoto" }, { name: "Júnior" }], html_url: "https://x/1", created_at: "2026-01-01" });
+  ok(g1.title === "Mobile Engineer" && g1.remote === true && g1.source === "github", "normalizeGithubIssue limpa título e detecta remoto");
+  ok(sc.githubKeep(g1) === true, "githubKeep aprova júnior remoto");
   sc.configure(); // volta pros defaults
   // tailor: rank + CV adaptado
   const tl = await import("../scripts/tailor.mjs");

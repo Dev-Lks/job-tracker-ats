@@ -19,9 +19,19 @@ export const DEFAULT_KEYWORDS = [
   "estagio", "estágio", "intern", "trainee",
   "junior", "jr", "júnior",
   "react", "node", "typescript", "javascript", "python",
-  "fullstack", "full-stack", "frontend", "backend",
+  "fullstack", "full-stack", "full stack", "frontend", "front-end", "front end",
+  "backend", "back-end", "back end",
   "home office", "remoto", "remota",
 ];
+// Relevância tech: pelo menos 1 precisa aparecer no título/tags (mata "Office Assistant", "Marketing"...)
+export const TECH_KEYWORDS = [
+  "react", "node", "typescript", "javascript", "python", "java", "php", "ruby", "go", "golang",
+  "mobile", "android", "ios", "flutter", "vue", "angular", "dotnet", ".net", "laravel", "django",
+  "fullstack", "full-stack", "frontend", "backend", "devops", "docker", "sql", "qa", "dados", "data",
+];
+export function matchesTech(text) {
+  return matchList(text, TECH_KEYWORDS).length > 0;
+}
 export const KEYWORDS = DEFAULT_KEYWORDS; // compat
 export const DEFAULT_EXCLUDE = [
   "senior", "sênior", "sr", "staff", "principal",
@@ -58,6 +68,7 @@ export function loadConfig() {
       country: file.adzuna?.country ?? "br",
       queries: file.adzuna?.queries ?? ["estagio react", "estagio frontend", "estagio backend", "desenvolvedor junior", "estagio python", "estagio javascript"],
     },
+    githubRepos: file.githubRepos ?? ["frontendbr/vagas", "backend-br/vagas", "react-brasil/vagas", "phpdevbr/vagas", "androiddevbr/vagas"],
     limit: Number(env.SCRAPE_LIMIT) > 0 ? Number(env.SCRAPE_LIMIT)
       : (Number(file.limit) > 0 ? Number(file.limit) : 100),
   };
@@ -147,6 +158,60 @@ export function normalizeAdzuna(r = {}) {
   };
 }
 
+// Repos de vagas BR (frontendbr/vagas, backend-br/vagas…): issues com labels de nível/local.
+// Labels decidem: nível permitido (estágio/júnior/trainee) ou título com keyword; bloqueadas matam.
+const GH_LEVEL_OK = ["estagio", "estágio", "junior", "júnior", "trainee", "jr", "estagiario"];
+const GH_LEVEL_BLOCK = ["senior", "sênior", "especialista", "pleno", "sr", "lead"];
+const GH_REMOTE = ["remoto", "remote", "home office", "hibrido", "híbrido"];
+// Empresa em títulos tipo "[Remoto] Cargo @ Empresa" | "Cargo na Empresa" | "Cargo (Empresa)" | "Cargo - Empresa"
+export function extractCompany(t) {
+  t = String(t || "");
+  let m = t.match(/@\s*([^@|•\-–—(][^@|•\-–—(]{0,60})/);
+  if (m) return m[1].trim();
+  m = t.match(/\(([^()]{2,50})\)\s*$/);
+  if (m && !/remoto|h[ií]brido|presencial|pj|clt|j[úu]nior|pleno|s[eê]nior|usd|brl|eur|r\$|react|node|python|java|php|net/i.test(m[1])) return m[1].trim();
+  m = t.match(/\s+na\s+([A-ZÀ-Ú][\w&.'\- ]{1,50})\s*$/);
+  if (m) return m[1].trim();
+  m = t.match(/\s+[-–—•]\s*([^\-–—•(]{2,50})\s*$/);
+  if (m && !/react|node|python|java|php|dev|front|back|full|mobile|dados|data|qa|usd|brl|r\$/i.test(m[1])) return m[1].trim();
+  return "";
+}
+export function normalizeGithubIssue(repo, issue = {}) {
+  const labels = Array.isArray(issue.labels) ? issue.labels.map((l) => String(l.name || l)) : [];
+  const low = labels.join(" ").toLowerCase();
+  const has = (list) => list.some((k) => low.includes(k));
+  const rawTitle = String(issue.title || "Sem título").trim();
+  const company = extractCompany(rawTitle);
+  const title = rawTitle
+    .replace(/^\[[^\]]+\]\s*/, "")
+    .replace(/\s*@\s*[^@|•\-–—(]+$/, "")
+    .replace(/\s+[-–—•]\s*[^\-–—•(]{1,40}$/, (m) => (/react|node|python|java|php|dev|front|back|full|mobile|dados|data|qa/i.test(m) ? m : ""))
+    .replace(/\s*\([^()]*\)\s*$/, "") // sufixo "(Strider)/(USD)" é metadado, não título
+    .replace(/\s+[-–—]\s*(USD|BRL|EUR|R\$)\s*$/i, "")
+    .trim();
+  const remote = has(GH_REMOTE) || /\[remoto\]|\(remoto\)|remoto/i.test(rawTitle);
+  const tags = [...new Set([...labels.filter((l) => l.length <= 20).slice(0, 8), ...matchedKeywords(rawTitle + " " + labels.join(" "))])].slice(0, 12);
+  return {
+    id: `github-${repo.replace("/", "-")}-${issue.number}`,
+    title: title || rawTitle.replace(/^\[[^\]]+\]\s*/, ""),
+    company,
+    url: String(issue.html_url || ""),
+    location: labels.filter((l) => /são paulo|sp\b|rio|rJ\b|brasil|br\b|remoto/i.test(l)).slice(0, 2).join(" · "),
+    remote,
+    tags,
+    source: "github",
+    published_at: String(issue.created_at || ""),
+    _labels: labels,
+  };
+}
+export function githubKeep(n) {
+  const labels = (n._labels || []).join(" ").toLowerCase();
+  const blocked = GH_LEVEL_BLOCK.some((k) => labels.includes(k)) || titleBlocked(n.title);
+  if (blocked) return false;
+  if (GH_LEVEL_OK.some((k) => labels.includes(k))) return true;
+  return matchesKeywords([n.title, (n.tags || []).join(" ")].join(" "));
+}
+
 export function normalizeArbeitnow(item = {}) {
   const tags = Array.isArray(item.tags) ? item.tags.map((t) => String(t)) : [];
   const types = Array.isArray(item.job_types) ? item.job_types.map((t) => String(t)) : [];
@@ -175,7 +240,10 @@ export function normalizeArbeitnow(item = {}) {
 }
 
 async function fetchJSON(url) {
-  const res = await fetch(url, { headers: { "User-Agent": "job-tracker-ats/1.0" } });
+  const headers = { "User-Agent": "job-tracker-ats/1.0", Accept: "application/vnd.github+json" };
+  const tok = (process.env.GH_TOKEN || process.env.GITHUB_TOKEN || "").trim();
+  if (tok) headers.Authorization = `Bearer ${tok}`;
+  const res = await fetch(url, { headers });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return res.json();
 }
@@ -184,6 +252,25 @@ async function main() {
   const cfg = loadConfig();
   console.log(`filtros: remoteOnly=${cfg.remoteOnly} keywords=${cfg.keywords.length} exclude=${cfg.excludeKeywords.length} sources=${cfg.sources.join("+")} limit=${cfg.limit}`);
   const all = [];
+
+  // GitHub PRIMEIRO (vagas BR com labels; entra primeiro no round-robin)
+  if (cfg.sources.includes("github")) {
+    let raw = 0, kept = 0;
+    for (const repo of cfg.githubRepos) {
+      try {
+        const issues = await fetchJSON(`https://api.github.com/repos/${repo}/issues?state=open&per_page=100`);
+        for (const issue of Array.isArray(issues) ? issues : []) {
+          if (issue.pull_request) continue;
+          raw++;
+          const n = normalizeGithubIssue(repo, issue);
+          if (githubKeep(n)) { const { _labels, ...job } = n; all.push(job); kept++; }
+        }
+      } catch (e) {
+        console.error(`github/${repo} falhou: ${e.message} — seguindo`);
+      }
+    }
+    console.log(`github: ${kept} filtradas de ${raw} issues (${cfg.githubRepos.length} repos)`);
+  }
 
   if (cfg.sources.includes("remotive")) try {
     const cats = cfg.remotiveCategories.length ? cfg.remotiveCategories : ["software-dev"];
@@ -200,9 +287,9 @@ async function main() {
     }
     let kept = 0;
     for (const j of raw) {
-      // inclusão: título/empresa/categoria/tags (descrição é ruidosa, fica fora)
-      const hay = [j.title, j.company_name, j.category, (j.tags || []).join(" ")].join(" ");
-      if (matchesKeywords(hay) && !titleBlocked(j.title)) {
+      // título precisa carregar o sinal (nível ou tech); tags sozinhas geram lixo ("Office Assistant")
+      const techHay = [j.title, j.category, (j.tags || []).join(" ")].join(" ");
+      if (matchesKeywords(j.title) && matchesTech(techHay) && !titleBlocked(j.title)) {
         all.push(normalizeRemotive(j));
         kept++;
       }
@@ -217,11 +304,8 @@ async function main() {
     const raw = Array.isArray(data.data) ? data.data : [];
     let kept = 0;
     for (const it of raw) {
-      const hay = [
-        it.title, it.company_name, it.location,
-        (it.tags || []).join(" "), (it.job_types || []).join(" "),
-      ].join(" ");
-      if (matchesKeywords(hay) && !titleBlocked(it.title)) {
+      const techHay = [it.title, (it.tags || []).join(" ")].join(" ");
+      if (matchesKeywords(it.title) && matchesTech(techHay) && !titleBlocked(it.title)) {
         all.push(normalizeArbeitnow(it));
         kept++;
       }
@@ -253,8 +337,7 @@ async function main() {
       }
       let kept = 0;
       for (const r of raw) {
-        const hay = [r.title, r.company?.display_name, r.location?.display_name, r.category?.label].join(" ");
-        if (matchesKeywords(hay) && !titleBlocked(r.title)) {
+        if (matchesKeywords(r.title) && matchesTech([r.title, r.category?.label].join(" ")) && !titleBlocked(r.title)) {
           all.push(normalizeAdzuna(r));
           kept++;
         }
@@ -268,10 +351,17 @@ async function main() {
   // dedupe por url (sem url, vale o id) — remoteOnly filtra antes
   const pool = cfg.remoteOnly ? all.filter((j) => j.remote) : all;
   const seen = new Set();
+  const seenTitle = new Set();
   const jobs = [];
   for (const j of pool) {
     const key = (j.url && j.url.trim()) || j.id;
     if (!key || seen.has(key)) continue;
+    // GitHub: mesma vaga repostada em N issues (ex.: 5x "Strider") — 1ª vence
+    if (j.source === "github") {
+      const tk = strip(j.title).replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim().slice(0, 45);
+      if (seenTitle.has(tk)) continue;
+      seenTitle.add(tk);
+    }
     seen.add(key);
     jobs.push(j);
   }

@@ -4,7 +4,8 @@
     "estágio", "estagio", "intern", "internship", "trainee",
     "junior", "júnior", "jr", "entry-level", "entry level",
     "react", "node", "typescript", "javascript", "python",
-    "fullstack", "full-stack", "frontend", "backend",
+    "fullstack", "full-stack", "full stack", "frontend", "front-end", "front end",
+    "backend", "back-end", "back end",
     "home office", "remoto", "remota"
   ],
   "excludeKeywords": [
@@ -14,7 +15,7 @@
     "gerente", "architect", "arquiteto"
   ],
   "remoteOnly": true,
-  "sources": ["remotive", "arbeitnow", "adzuna"],
+  "sources": ["github", "remotive", "arbeitnow", "adzuna"],
   "remotiveCategories": ["software-dev", "data", "devops"],
   "limit": 100
 }

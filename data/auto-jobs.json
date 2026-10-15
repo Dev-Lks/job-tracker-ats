@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-15T08:55:09.588Z",
-  "count": 4,
+  "updated_at": "2026-10-15T11:30:17.845Z",
+  "count": 13,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -21,8 +21,13 @@
       "python",
       "fullstack",
       "full-stack",
+      "full stack",
       "frontend",
+      "front-end",
+      "front end",
       "backend",
+      "back-end",
+      "back end",
       "home office",
       "remoto",
       "remota"
@@ -49,6 +54,7 @@
       "arquiteto"
     ],
     "sources": [
+      "github",
       "remotive",
       "arbeitnow",
       "adzuna"
@@ -56,63 +62,21 @@
   },
   "jobs": [
     {
-      "id": "arbeitnow-praktikum-im-online-marketing-marketing-projektmanagement-bielefeld-311115",
-      "title": "Praktikum im Online-Marketing / Marketing / Projektmanagement",
-      "company": "SEOMATIK GmbH",
-      "url": "https://www.arbeitnow.com/jobs/companies/seomatik-gmbh/praktikum-im-online-marketing-marketing-projektmanagement-bielefeld-311115",
-      "location": "Bielefeld",
+      "id": "github-backend-br-vagas-12451",
+      "title": "Forward Deployed Engineer, Gen AI, Google Cloud (English, Portuguese) na Google",
+      "company": "Google",
+      "url": "https://github.com/backend-br/vagas/issues/12451",
+      "location": "Remoto",
       "remote": true,
       "tags": [
-        "Remote",
-        "Online Marketing",
-        "Praktikum",
-        "internship",
-        "hilfstätigkeit / student",
-        "intern"
+        "Python",
+        "Remoto",
+        "GCP",
+        "python",
+        "remoto"
       ],
-      "source": "arbeitnow",
-      "published_at": "2026-10-15T05:30:47.000Z"
-    },
-    {
-      "id": "remotive-1680495",
-      "title": "Remote Office Assistant",
-      "company": "Coalition Technologies",
-      "url": "https://remotive.com/remote-jobs/marketing/remote-office-assistant-1680495",
-      "location": "Worldwide",
-      "remote": true,
-      "tags": [
-        "CSS",
-        "excel",
-        "frontend",
-        "git",
-        "html",
-        "illustrator",
-        "magento",
-        "photoshop",
-        "php",
-        "shopify",
-        "wordpress",
-        "MySQL"
-      ],
-      "source": "remotive",
-      "published_at": "2026-10-11T20:17:27"
-    },
-    {
-      "id": "arbeitnow-remote-stage-lopen-bij-cordaan-je-opleiding-in-de-praktijk-amsterdam-en-omgeving-363183",
-      "title": "Stage lopen bij Cordaan: Je opleiding in de praktijk",
-      "company": "Cordaan",
-      "url": "https://www.arbeitnow.nl/jobs/companies/cordaan/remote-stage-lopen-bij-cordaan-je-opleiding-in-de-praktijk-amsterdam-en-omgeving-363183",
-      "location": "Werken op afstand",
-      "remote": true,
-      "tags": [
-        "Stage",
-        "Remote",
-        "Student school",
-        "internship",
-        "intern"
-      ],
-      "source": "arbeitnow",
-      "published_at": "2026-10-14T20:32:33.000Z"
+      "source": "github",
+      "published_at": "2026-10-14T20:28:54Z"
     },
     {
       "id": "arbeitnow-fullstack-software-engineer-ror-js-w-m-paris-363056",
@@ -126,10 +90,207 @@
         "Full Time",
         "intern",
         "javascript",
-        "fullstack"
+        "fullstack",
+        "full stack"
       ],
       "source": "arbeitnow",
       "published_at": "2026-10-14T17:40:23.000Z"
+    },
+    {
+      "id": "github-backend-br-vagas-12444",
+      "title": "Dev java junior",
+      "company": "DB1",
+      "url": "https://github.com/backend-br/vagas/issues/12444",
+      "location": "Remoto",
+      "remote": true,
+      "tags": [
+        "CLT",
+        "Júnior",
+        "Java",
+        "Remoto",
+        "MongoDB",
+        "PostgreSQL",
+        "RabbitMQ",
+        "Docker",
+        "junior",
+        "júnior",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-10-13T19:51:25Z"
+    },
+    {
+      "id": "github-backend-br-vagas-12442",
+      "title": "Back-end Software Engineer",
+      "company": "Micro1",
+      "url": "https://github.com/backend-br/vagas/issues/12442",
+      "location": "Remoto",
+      "remote": true,
+      "tags": [
+        "Python",
+        "Node.js",
+        "Java",
+        "Go",
+        "Remoto",
+        "Testes automatizados",
+        "TypeScript",
+        "node",
+        "typescript",
+        "python",
+        "back-end",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-10-10T19:44:18Z"
+    },
+    {
+      "id": "github-backend-br-vagas-12441",
+      "title": "Full Stack Developer",
+      "company": "Cogfy",
+      "url": "https://github.com/backend-br/vagas/issues/12441",
+      "location": "Remoto",
+      "remote": true,
+      "tags": [
+        "PJ",
+        "Node.js",
+        "Remoto",
+        "Testes automatizados",
+        "TypeScript",
+        "PostgreSQL",
+        "Docker",
+        "Kubernetes",
+        "node",
+        "typescript",
+        "full stack",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-10-09T15:07:16Z"
+    },
+    {
+      "id": "github-frontendbr-vagas-8566",
+      "title": "Full-stack Engineer React.js • UX Design • Node.js",
+      "company": "Strider",
+      "url": "https://github.com/frontendbr/vagas/issues/8566",
+      "location": "",
+      "remote": true,
+      "tags": [
+        "react",
+        "node",
+        "full-stack",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-10-07T14:03:28Z"
+    },
+    {
+      "id": "github-backend-br-vagas-12432",
+      "title": "Back-end developer Net-",
+      "company": "Strider",
+      "url": "https://github.com/backend-br/vagas/issues/12432",
+      "location": "Remoto",
+      "remote": true,
+      "tags": [
+        "Remoto",
+        "SQL",
+        "back-end",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-09-23T17:03:05Z"
+    },
+    {
+      "id": "github-androiddevbr-vagas-2248",
+      "title": "Mobile Engineer",
+      "company": "",
+      "url": "https://github.com/androiddevbr/vagas/issues/2248",
+      "location": "",
+      "remote": true,
+      "tags": [
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-09-19T13:49:29Z"
+    },
+    {
+      "id": "github-frontendbr-vagas-8563",
+      "title": "Back-end Engineer. Net",
+      "company": "",
+      "url": "https://github.com/frontendbr/vagas/issues/8563",
+      "location": "",
+      "remote": true,
+      "tags": [
+        "back-end",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-09-17T18:59:30Z"
+    },
+    {
+      "id": "github-frontendbr-vagas-8552",
+      "title": "Full-stack Engineer (UX (focused) Strider",
+      "company": "",
+      "url": "https://github.com/frontendbr/vagas/issues/8552",
+      "location": "Remoto",
+      "remote": true,
+      "tags": [
+        "Remoto",
+        "full-stack",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-08-28T01:40:18Z"
+    },
+    {
+      "id": "github-react-brasil-vagas-3019",
+      "title": "Frontend Engineer",
+      "company": "Botcity",
+      "url": "https://github.com/react-brasil/vagas/issues/3019",
+      "location": "",
+      "remote": true,
+      "tags": [
+        "frontend",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-07-10T20:36:53Z"
+    },
+    {
+      "id": "github-backend-br-vagas-12245",
+      "title": "Full-stack Engineer",
+      "company": "",
+      "url": "https://github.com/backend-br/vagas/issues/12245",
+      "location": "Remoto · ASP",
+      "remote": true,
+      "tags": [
+        ".NET",
+        "Remoto",
+        "AWS",
+        "SQL",
+        "Git",
+        "ASP",
+        "Stale",
+        "CI/CD",
+        "react",
+        "full-stack",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-05-25T16:54:47Z"
+    },
+    {
+      "id": "github-phpdevbr-vagas-1323",
+      "title": "Backend Developer PHP/Laravel na Coodesh",
+      "company": "Coodesh",
+      "url": "https://github.com/phpdevbr/vagas/issues/1323",
+      "location": "",
+      "remote": true,
+      "tags": [
+        "backend",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-01-13T14:23:29Z"
     }
   ]
 }
