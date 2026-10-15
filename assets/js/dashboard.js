@@ -155,30 +155,59 @@ render();
     if (!res.ok) return;
     data = await res.json();
   } catch { return; } // silencioso: esconde a seção se não houver dados
-  const jobs = Array.isArray(data.jobs) ? data.jobs.slice(0, 20) : [];
+  const jobs = Array.isArray(data.jobs) ? data.jobs : [];
   if (!jobs.length) return;
   box.hidden = false;
   try {
     if (data.updated_at) $("autoJobsUpdated").textContent =
       "· atualizado em " + new Date(data.updated_at).toLocaleString("pt-BR");
   } catch {}
+  try {
+    const f = data.filters;
+    if (f && f.remoteOnly) $("autoRemote").checked = true;
+    if (f && Array.isArray(f.keywords)) $("autoJobsUpdated").textContent +=
+      ` · foco: ${f.remoteOnly ? "remoto" : "todas"} · ${f.keywords.length} keywords`;
+  } catch {}
+  const norm = s => (s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const levelOf = j => {
+    const h = norm([j.title, (j.tags || []).join(" ")].join(" "));
+    if (/estag|intern|trainee/.test(h)) return "estagio";
+    if (/junior|\bjr\b|entry/.test(h)) return "junior";
+    return "outro";
+  };
   const inPipe = u => u && db.jobs.some(j => j.url && j.url === u);
   const list = $("autoJobsList");
-  list.innerHTML = jobs.map((j, i) => `<div class="kcard"><b>${esc(j.title)}</b><span class="muted">${esc(j.company)}</span><br>`
-    + `<span class="muted small">${esc(j.location || "")}${(j.tags || []).length ? " · " + esc(j.tags.slice(0, 4).join(", ")) : ""}</span>`
-    + (j.url ? `<br><a class="small" href="${esc(j.url)}" target="_blank" rel="noopener">ver vaga ↗</a>` : "")
-    + `<div class="mv"><button class="ghost small" data-auto-add="${i}" ${inPipe(j.url) ? "disabled" : ""}>${inPipe(j.url) ? "✓ Na pipeline" : "+ Adicionar"}</button></div></div>`).join("");
-  list.querySelectorAll("[data-auto-add]").forEach(btn => btn.onclick = () => {
-    const j = jobs[Number(btn.dataset.autoAdd)];
-    if (!j || inPipe(j.url)) return;
-    db.jobs.unshift({
-      id: uid(), title: j.title || "Sem título", company: j.company || "",
-      status: "wishlist", url: j.url || "", location: j.location || "",
-      remote: Boolean(j.remote), tags: Array.isArray(j.tags) ? j.tags : [],
-      applied_at: "", notes: "via automação (" + (j.source || "auto") + ")",
-      created_at: new Date().toISOString().slice(0, 10)
+  const renderAuto = () => {
+    const q = norm($("autoSearch").value);
+    const lv = $("autoLevel").value;
+    const rm = $("autoRemote").checked;
+    const vis = jobs.filter(j => {
+      if (rm && !j.remote) return false;
+      if (lv && levelOf(j) !== lv) return false;
+      if (q && !norm(`${j.title} ${j.company} ${(j.tags || []).join(" ")}`).includes(q)) return false;
+      return true;
+    }).slice(0, 20);
+    list.innerHTML = vis.map(j => {
+      const i = jobs.indexOf(j);
+      return `<div class="kcard"><b>${esc(j.title)}</b><span class="muted">${esc(j.company)}</span><br>`
+      + `<span class="muted small">${j.remote ? "remoto · " : ""}${esc(j.location || "")}${(j.tags || []).length ? " · " + esc(j.tags.slice(0, 4).join(", ")) : ""}</span>`
+      + (j.url ? `<br><a class="small" href="${esc(j.url)}" target="_blank" rel="noopener">ver vaga ↗</a>` : "")
+      + `<div class="mv"><button class="ghost small" data-auto-add="${i}" ${inPipe(j.url) ? "disabled" : ""}>${inPipe(j.url) ? "✓ Na pipeline" : "+ Adicionar"}</button></div></div>`;
+    }).join("") || `<p class="muted small">Nenhuma automática com esses filtros.</p>`;
+    list.querySelectorAll("[data-auto-add]").forEach(btn => btn.onclick = () => {
+      const j = jobs[Number(btn.dataset.autoAdd)];
+      if (!j || inPipe(j.url)) return;
+      db.jobs.unshift({
+        id: uid(), title: j.title || "Sem título", company: j.company || "",
+        status: "wishlist", url: j.url || "", location: j.location || "",
+        remote: Boolean(j.remote), tags: Array.isArray(j.tags) ? j.tags : [],
+        applied_at: "", notes: "via automação (" + (j.source || "auto") + ")",
+        created_at: new Date().toISOString().slice(0, 10)
+      });
+      Store.save(db); render();
+      btn.disabled = true; btn.textContent = "✓ Na pipeline";
     });
-    Store.save(db); render();
-    btn.disabled = true; btn.textContent = "✓ Na pipeline";
-  });
+  };
+  ["autoSearch", "autoLevel", "autoRemote"].forEach(id => $(id).addEventListener("input", renderAuto));
+  renderAuto();
 })();

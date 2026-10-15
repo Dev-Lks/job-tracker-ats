@@ -42,6 +42,11 @@
 <div class="card" id="autoJobs" hidden>
   <h3 style="margin:0 0 4px">🤖 Vagas automáticas <span class="muted small" id="autoJobsUpdated"></span></h3>
   <p class="muted small" style="margin:0 0 10px">Coletadas todo dia de APIs gratuitas (Remotive + Arbeitnow). Use <b>+ Adicionar</b> pra levar pro seu pipeline.</p>
+  <div class="auto-filters">
+    <input id="autoSearch" placeholder="Filtrar automáticas…" style="max-width:220px">
+    <select id="autoLevel" style="max-width:150px"><option value="">Nível: todos</option><option value="estagio">Estágio</option><option value="junior">Júnior</option><option value="outro">Outro</option></select>
+    <label class="muted small" style="display:flex;gap:6px;align-items:center"><input type="checkbox" id="autoRemote"> só remoto</label>
+  </div>
   <div id="autoJobsList" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px"></div>
 </div>
 

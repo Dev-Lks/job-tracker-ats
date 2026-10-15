@@ -4,9 +4,29 @@ on:
   schedule:
     - cron: "0 11 * * *"
   workflow_dispatch:
+    inputs:
+      keywords:
+        description: "Sobrescreve keywords (separadas por vírgula; vazio = usa o config)"
+        required: false
+        default: ""
+      remote_only:
+        description: "Só vagas remotas"
+        required: false
+        default: "true"
+        type: choice
+        options: ["true", "false"]
+      limit:
+        description: "Máximo de vagas no JSON"
+        required: false
+        default: "100"
 
 permissions:
   contents: write
+
+env:
+  SCRAPE_KEYWORDS: ${{ inputs.keywords }}
+  SCRAPE_REMOTE_ONLY: ${{ inputs.remote_only }}
+  SCRAPE_LIMIT: ${{ inputs.limit }}
 
 jobs:
   scrape:

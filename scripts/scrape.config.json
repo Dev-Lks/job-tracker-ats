@@ -1,0 +1,19 @@
+{
+  "_comment": "Filtros do scraper (scripts/scrape.mjs). Edite e rode 'node scripts/scrape.mjs' ou dispare o workflow. Env vars SCRAPE_* sobrescrevem estes valores.",
+  "keywords": [
+    "estágio", "estagio", "intern", "internship", "trainee",
+    "junior", "júnior", "jr", "entry-level", "entry level",
+    "react", "node", "typescript", "javascript", "python",
+    "fullstack", "full-stack", "frontend", "backend"
+  ],
+  "excludeKeywords": [
+    "senior", "sênior", "sr", "staff", "principal",
+    "lead", "manager", "pleno", "mid-level", "mid level",
+    "director", "diretor", "head", "vp", "chief", "founder",
+    "gerente", "architect", "arquiteto"
+  ],
+  "remoteOnly": true,
+  "sources": ["remotive", "arbeitnow"],
+  "remotiveCategories": ["software-dev", "data", "devops"],
+  "limit": 100
+}

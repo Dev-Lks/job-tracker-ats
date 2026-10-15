@@ -61,20 +61,40 @@ Reimplementados aqui do zero, sem bloat.
 
 Todo dia às 11:00 UTC o workflow `.github/workflows/scrape.yml` roda `node scripts/scrape.mjs`
 (sem `setup-node` — o runner já tem Node), que busca vagas nas APIs gratuitas **Remotive**
-(`remotive.com/api/remote-jobs?category=software-dev&limit=100`) e **Arbeitnow**
-(`arbeitnow.com/api/job-board-api`), filtra por keywords (estágio, intern, trainee, júnior,
-react, node, typescript, javascript, python, fullstack, frontend, backend…), normaliza pra
-`{id,title,company,url,location,remote,tags[],source,published_at}`, remove duplicadas por URL
-e grava `data/auto-jobs.json` (`{updated_at, count, jobs[]}`).
+(categorias `software-dev`, `data`, `devops`) e **Arbeitnow**, e grava
+`data/auto-jobs.json` (`{updated_at, count, filters, jobs[]}`).
 
-O commit só acontece se o arquivo mudou (`git diff --quiet` → commit + push). Pra rodar manual:
+### Filtros (`scripts/scrape.config.json`)
+
+```jsonc
+{
+  "keywords": ["estágio", "intern", "junior", "react", "node", ...],
+  "excludeKeywords": ["senior", "pleno", "lead", ...],
+  "remoteOnly": true,
+  "sources": ["remotive", "arbeitnow"],
+  "remotiveCategories": ["software-dev", "data", "devops"],
+  "limit": 100
+}
+```
+
+Regras: **inclusão** casa keywords no título/empresa/categoria/tags (descrição fica de fora
+porque é ruidosa); **exclusão** olha **só o título** ("work with senior engineers" não é vaga
+sênior); `remoteOnly` descarta presenciais antes do dedupe por URL.
+
+Pra rodar manual ou sobrescrever sem editar o config:
 
 ```bash
 node scripts/scrape.mjs        # ou: aba Actions → "Scrape vagas" → Run workflow
+SCRAPE_KEYWORDS="estagio,react" SCRAPE_REMOTE_ONLY=true SCRAPE_LIMIT=50 node scripts/scrape.mjs
 ```
 
-O dashboard (`index.html`) lê esse JSON e mostra o card **🤖 Vagas automáticas** (até 20 itens,
-com botão **+ Adicionar** que insere na pipeline como `wishlist`, pulando URLs já presentes).
+O Run workflow aceita os mesmos overrides como inputs (`keywords`, `remote_only`, `limit`).
 
-> Nota: o `data/auto-jobs.json` servido no Pages é demo — pode estar desatualizado; rode o
-> script pra atualizar.
+O commit só acontece se o arquivo mudou. O dashboard (`index.html`) lê esse JSON no card
+**🤖 Vagas automáticas** com filtros próprios (busca, nível estágio/júnior/outro, só remoto —
+o foco ativo do JSON aparece no label) e botão **+ Adicionar** (insere como `wishlist`,
+pulando URLs já presentes).
+
+> Nota: o `data/auto-jobs.json` servido no Pages é demo. E aviso honesto: essas APIs grátis
+> cobrem bem o mercado remoto gringo, mas quase nada de estágio BR — pra Gupy/LinkedIn BR,
+> cadastre manual (ou CSV) e use o pipeline do mesmo jeito.

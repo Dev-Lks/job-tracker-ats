@@ -65,5 +65,16 @@ ok(got.startsWith('"title","company","status"'), "exportCSV gera cabeçalho");
   ok(r.source === "remotive" && r.remote === true && r.tags.includes("react"), "normalizeRemotive OK");
   const a = sc.normalizeArbeitnow({ slug: "s", title: "Backend Node Developer", company_name: "Acme", url: "https://y", location: "Berlin", remote: false, tags: [], job_types: ["full-time"] });
   ok(a.source === "arbeitnow" && a.remote === false, "normalizeArbeitnow OK");
+  // filtros configuráveis
+  sc.configure({ keywords: ["estagio", "react"], excludeKeywords: ["senior"] });
+  ok(sc.matchesKeywords("Estágio em React"), "configure aplica keywords custom");
+  ok(sc.titleBlocked("Senior React Developer"), "titleBlocked barra sênior no título");
+  ok(!sc.titleBlocked("Junior React Developer"), "título júnior passa");
+  ok(sc.matchesKeywords("we work with senior engineers and React"), "exclusão é no título: descrição com 'senior' ainda casa");
+  const cfg = sc.loadConfig();
+  ok(cfg.remoteOnly === true && cfg.sources.includes("remotive"), "loadConfig lê o config (remoteOnly)");
+  const pool = sc.applyFilters([{ remote: true }, { remote: false }, { remote: true }], { remoteOnly: true, limit: 2 });
+  ok(pool.length === 2 && pool.every(j => j.remote), "applyFilters: só remoto + limit");
+  sc.configure(); // volta pros defaults
   console.log(`\n${n} testes passaram.`);
 })().catch(e => { console.error("FALHOU:", e.message); process.exit(1); });
