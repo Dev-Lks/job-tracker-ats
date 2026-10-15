@@ -1,5 +1,15 @@
 let PROFILE = null;
 const $ = id => document.getElementById(id);
+let LANG = "pt";
+const SUM = { pt: "", en: "" };
+function setLang(l) {
+  SUM[LANG] = $("summary").value;
+  LANG = l;
+  $("summary").value = SUM[l] || "";
+  $("langPT").classList.toggle("on", l === "pt");
+  $("langEN").classList.toggle("on", l === "en");
+  render();
+}
 
 // Demo (Pages) usa data/profile.example.json; local usa data/profile.json (gitignored, só seu).
 function loadProfile() {
@@ -18,6 +28,10 @@ loadProfile().then(p => {
     } catch {}
   }
   $("summary").value = PROFILE.summary;
+  SUM.pt = PROFILE.summary;
+  SUM.en = PROFILE.summary_en || PROFILE.summary;
+  $("langPT").onclick = () => setLang("pt");
+  $("langEN").onclick = () => setLang("en");
   render(null);
 });
 
@@ -48,9 +62,16 @@ $("btnTailor").onclick = () => {
   const jd = $("jd").value;
   if (!jd.trim()) return alert("Cole a JD primeiro.");
   const kws = keywords(jd, 12);
-  const role = $("jobTitle").value || "a vaga";
   const top = kws.slice(0, 6).join(", ");
-  $("summary").value = `${PROFILE.base_summary} Alinhado a ${role}${$("company").value ? " na " + $("company").value : ""}, com experiência prática em ${top}.`;
+  if (LANG === "en") {
+    const role = $("jobTitle").value || "this role";
+    SUM.en = `${PROFILE.base_summary_en || PROFILE.summary} Aligned with ${role}${$("company").value ? " at " + $("company").value : ""}, with hands-on experience in ${top}.`;
+    $("summary").value = SUM.en;
+  } else {
+    const role = $("jobTitle").value || "a vaga";
+    SUM.pt = `${PROFILE.base_summary} Alinhado a ${role}${$("company").value ? " na " + $("company").value : ""}, com experiência prática em ${top}.`;
+    $("summary").value = SUM.pt;
+  }
   render(); alert("Resumo adaptado + skills reordenadas. Revise antes de enviar.");
 };
 $("btnCheck").onclick = () => {
@@ -63,13 +84,13 @@ $("btnPDF").onclick = () => {
   const co = ($("company").value || "").replace(/\s+/g, "-");
   const old = document.title;
   const slug = PROFILE.name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^A-Za-z0-9]+/g, "-").replace(/^-|-$/g, "");
-  document.title = `CV-${slug}-${jt}${co ? "-" + co : ""}`;
+  document.title = `CV-${slug}-${jt}${co ? "-" + co : ""}${LANG === "en" ? "-en" : ""}`;
   window.print();
   setTimeout(() => document.title = old, 500);
 };
 $("btnSave").onclick = () => {
   const db = JSON.parse(localStorage.getItem("jta.v1") || '{"jobs":[],"resumes":[]}');
-  db.resumes.unshift({ id: Math.random().toString(36).slice(2, 9), job: $("jobTitle").value, company: $("company").value, summary: $("summary").value, date: new Date().toISOString().slice(0, 10) });
+  db.resumes.unshift({ id: Math.random().toString(36).slice(2, 9), job: $("jobTitle").value, company: $("company").value, summary: $("summary").value, lang: LANG, date: new Date().toISOString().slice(0, 10) });
   localStorage.setItem("jta.v1", JSON.stringify(db));
   alert("Variação salva no dashboard (backup JSON).");
 };

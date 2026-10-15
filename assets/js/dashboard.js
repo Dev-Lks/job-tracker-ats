@@ -161,7 +161,10 @@ async function refreshAuto() {
   try {
     let label = data.updated_at ? "· atualizado em " + new Date(data.updated_at).toLocaleString("pt-BR") : "";
     const f = data.filters;
-    if (f && f.remoteOnly) { $("autoRemote").checked = true; }
+    if (!box.dataset.init) {
+      if (f && f.remoteOnly) { $("autoRemote").checked = true; }
+      box.dataset.init = "1";
+    }
     if (f && Array.isArray(f.keywords)) label += ` · foco: ${f.remoteOnly ? "remoto" : "todas"} · ${f.keywords.length} keywords`;
     $("autoJobsUpdated").textContent = label;
   } catch {}

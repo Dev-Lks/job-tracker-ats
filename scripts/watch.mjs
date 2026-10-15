@@ -70,13 +70,18 @@ async function onApprove(jobHash) {
   const job = (data.jobs || []).find((j) => tg.shortId(j.id) === jobHash);
   if (!job) return "Vaga não encontrada no JSON atual (rode o scrape de novo).";
   const profile = await loadProfile();
-  const { mdPath, htmlPath, name, summary } = await tailorForJob(job, profile);
   const { readFile: rf } = await import("node:fs/promises");
-  await tg.sendDocument(`${name}.html`, await rf(htmlPath), `CV adaptado: ${job.title} @ ${job.company}\n${summary.slice(0, 300)}…`);
+  const made = [];
+  for (const lang of ["pt", "en"]) {
+    const { htmlPath, name, summary } = await tailorForJob(job, profile, lang);
+    await tg.sendDocument(`${name}.html`, await rf(htmlPath),
+      lang === "en" ? `Adapted CV (EN): ${job.title} @ ${job.company}` : `CV adaptado (PT): ${job.title} @ ${job.company}\n${summary.slice(0, 300)}…`);
+    made.push(name + ".html");
+  }
   const dec = await loadJSON(DECISIONS, { approved: [], ignored: [] });
-  dec.approved.unshift({ id: job.id, title: job.title, company: job.company, url: job.url, at: new Date().toISOString(), file: basename(htmlPath) });
+  dec.approved.unshift({ id: job.id, title: job.title, company: job.company, url: job.url, at: new Date().toISOString(), files: made });
   await saveJSON(DECISIONS, dec);
-  return `✅ CV gerado e enviado: ${name}.html (MD salvo em out/ junto)`;
+  return `✅ CVs gerados e enviados (PT + EN): ${made.join(", ")}`;
 }
 
 async function onIgnore(jobId) {
