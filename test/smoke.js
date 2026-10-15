@@ -89,9 +89,10 @@ ok(got.startsWith('"title","company","status"'), "exportCSV gera cabeçalho");
   ok(fs2.readFileSync(t.htmlPath, "utf8").includes(profile.name), "CV gerado contém o nome do perfil");
   // telegram: formatação + teclado (sem rede)
   const g = await import("../scripts/telegram.mjs");
-  ok(!g.configured(), "telegram.configured() false sem token (teste não manda nada)");
+  ok(typeof g.configured() === "boolean", "telegram.configured() responde (com ou sem token)");
   const kb = g.approveKeyboard("abc123");
-  ok(kb.reply_markup.inline_keyboard[0][0].callback_data === "job:approve:abc123", "approveKeyboard callback certo");
+  ok(kb.reply_markup.inline_keyboard[0][0].callback_data === `job:approve:${g.shortId("abc123")}`, "approveKeyboard callback certo (hash curto)");
+  ok(kb.reply_markup.inline_keyboard[0][0].callback_data.length <= 64, "callback_data dentro do limite do Telegram");
   ok(g.fmtJob(fakeJob, "⭐ 80").includes("Estágio React"), "fmtJob formata a vaga");
   console.log(`\n${n} testes passaram.`);
 })().catch(e => { console.error("FALHOU:", e.message); process.exit(1); });

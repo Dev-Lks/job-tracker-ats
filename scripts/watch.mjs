@@ -65,9 +65,9 @@ async function notifyCycle({ send = true } = {}) {
   return ranked;
 }
 
-async function onApprove(jobId) {
+async function onApprove(jobHash) {
   const data = await loadJSON(join(ROOT, "data", "auto-jobs.json"), { jobs: [] });
-  const job = (data.jobs || []).find((j) => j.id === jobId);
+  const job = (data.jobs || []).find((j) => tg.shortId(j.id) === jobHash);
   if (!job) return "Vaga não encontrada no JSON atual (rode o scrape de novo).";
   const profile = await loadProfile();
   const { mdPath, htmlPath, name, summary } = await tailorForJob(job, profile);
