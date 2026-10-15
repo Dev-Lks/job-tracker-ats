@@ -68,11 +68,12 @@ Todo dia às 11:00 UTC o workflow `.github/workflows/scrape.yml` roda `node scri
 
 ```jsonc
 {
-  "keywords": ["estágio", "intern", "junior", "react", "node", ...],
+  "keywords": ["estágio", "intern", "junior", "react", "node", "home office", "remoto", ...],
   "excludeKeywords": ["senior", "pleno", "lead", ...],
   "remoteOnly": true,
-  "sources": ["remotive", "arbeitnow"],
+  "sources": ["remotive", "arbeitnow", "adzuna"],
   "remotiveCategories": ["software-dev", "data", "devops"],
+  "adzuna": { "country": "br", "queries": ["estagio react", "desenvolvedor junior", ...] },
   "limit": 100
 }
 ```
@@ -95,9 +96,11 @@ O commit só acontece se o arquivo mudou. O dashboard (`index.html`) lê esse JS
 o foco ativo do JSON aparece no label) e botão **+ Adicionar** (insere como `wishlist`,
 pulando URLs já presentes).
 
-> Nota: o `data/auto-jobs.json` servido no Pages é demo. E aviso honesto: essas APIs grátis
-> cobrem bem o mercado remoto gringo, mas quase nada de estágio BR — pra Gupy/LinkedIn BR,
-> cadastre manual (ou CSV) e use o pipeline do mesmo jeito.
+> Nota: o `data/auto-jobs.json` servido no Pages é demo. E aviso honesto: Remotive + Arbeitnow
+> cobrem bem o mercado remoto gringo, mas quase nada de estágio BR — por isso existe a fonte
+> **Adzuna BR**: cadastre a chave grátis em https://developer.adzuna.com e coloque
+> `ADZUNA_APP_ID` + `ADZUNA_APP_KEY` no `scripts/.env` (ou Secrets no Actions) pra cobrir
+> vagas brasileiras. Gupy/LinkedIn não têm API pública — cadastre manual (ou CSV).
 
 ## Monitor Telegram 24/7 (aprovação + CV automático)
 

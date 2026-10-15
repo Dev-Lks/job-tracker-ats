@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-15T08:47:13.739Z",
+  "updated_at": "2026-10-15T08:55:09.588Z",
   "count": 4,
   "filters": {
     "remoteOnly": true,
@@ -22,7 +22,10 @@
       "fullstack",
       "full-stack",
       "frontend",
-      "backend"
+      "backend",
+      "home office",
+      "remoto",
+      "remota"
     ],
     "exclude": [
       "senior",
@@ -47,7 +50,8 @@
     ],
     "sources": [
       "remotive",
-      "arbeitnow"
+      "arbeitnow",
+      "adzuna"
     ]
   },
   "jobs": [

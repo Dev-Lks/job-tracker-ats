@@ -27,6 +27,8 @@ env:
   SCRAPE_KEYWORDS: ${{ inputs.keywords }}
   SCRAPE_REMOTE_ONLY: ${{ inputs.remote_only }}
   SCRAPE_LIMIT: ${{ inputs.limit }}
+  ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+  ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
 
 jobs:
   scrape:

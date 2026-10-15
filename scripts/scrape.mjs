@@ -20,6 +20,7 @@ export const DEFAULT_KEYWORDS = [
   "junior", "jr", "júnior",
   "react", "node", "typescript", "javascript", "python",
   "fullstack", "full-stack", "frontend", "backend",
+  "home office", "remoto", "remota",
 ];
 export const KEYWORDS = DEFAULT_KEYWORDS; // compat
 export const DEFAULT_EXCLUDE = [
@@ -53,6 +54,10 @@ export function loadConfig() {
       ? csv(env.SCRAPE_SOURCES).map((s) => s.toLowerCase())
       : (file.sources ?? ["remotive", "arbeitnow"]),
     remotiveCategories: file.remotiveCategories ?? ["software-dev", "data", "devops"],
+    adzuna: {
+      country: file.adzuna?.country ?? "br",
+      queries: file.adzuna?.queries ?? ["estagio react", "estagio frontend", "estagio backend", "desenvolvedor junior", "estagio python", "estagio javascript"],
+    },
     limit: Number(env.SCRAPE_LIMIT) > 0 ? Number(env.SCRAPE_LIMIT)
       : (Number(file.limit) > 0 ? Number(file.limit) : 100),
   };
@@ -119,6 +124,26 @@ export function normalizeRemotive(job = {}) {
     tags: merged,
     source: "remotive",
     published_at: String(job.publication_date || ""),
+  };
+}
+
+// Adzuna BR (https://developer.adzuna.com — chave grátis). Pula sem avisar se sem chave.
+export function normalizeAdzuna(r = {}) {
+  const loc = String(r.location?.display_name || r.location?.area?.[3] || "").trim();
+  const company = String(r.company?.display_name || "").trim();
+  const cat = String(r.category?.label || "").trim();
+  const hay = [r.title, company, loc, cat].join(" ");
+  const merged = [...new Set([cat, ...matchedKeywords(hay)])].filter(Boolean).slice(0, 12);
+  return {
+    id: `adzuna-${(r.id ?? strip(r.title).slice(0, 40)) || "na"}`,
+    title: String(r.title || "Sem título").trim().replace(/<[^>]+>/g, ""),
+    company,
+    url: String(r.redirect_url || ""),
+    location: loc,
+    remote: /remot|home.?office|teletrabalho/i.test([loc, r.description].join(" ")),
+    tags: merged,
+    source: "adzuna",
+    published_at: String(r.created || ""),
   };
 }
 
@@ -204,6 +229,40 @@ async function main() {
     console.log(`arbeitnow: ${kept} filtradas de ${raw.length}`);
   } catch (e) {
     console.error(`arbeitnow falhou: ${e.message} — seguindo sem ela`);
+  }
+
+  if (cfg.sources.includes("adzuna")) {
+    const appId = (process.env.ADZUNA_APP_ID || "").trim();
+    const appKey = (process.env.ADZUNA_APP_KEY || "").trim();
+    if (!appId || !appKey) {
+      console.log("adzuna: sem ADZUNA_APP_ID/ADZUNA_APP_KEY — pulando (chave grátis em developer.adzuna.com)");
+    } else try {
+      let raw = [];
+      for (const q of cfg.adzuna.queries) {
+        try {
+          const url = `https://api.adzuna.com/v1/api/jobs/${encodeURIComponent(cfg.adzuna.country)}/search/1`
+            + `?app_id=${encodeURIComponent(appId)}&app_key=${encodeURIComponent(appKey)}`
+            + `&results_per_page=50&what=${encodeURIComponent(q)}&content-type=application/json`;
+          const data = await fetchJSON(url);
+          const list = Array.isArray(data.results) ? data.results : [];
+          console.log(`adzuna/${q}: ${list.length} vagas`);
+          raw = raw.concat(list);
+        } catch (e) {
+          console.error(`adzuna/${q} falhou: ${e.message} — seguindo`);
+        }
+      }
+      let kept = 0;
+      for (const r of raw) {
+        const hay = [r.title, r.company?.display_name, r.location?.display_name, r.category?.label].join(" ");
+        if (matchesKeywords(hay) && !titleBlocked(r.title)) {
+          all.push(normalizeAdzuna(r));
+          kept++;
+        }
+      }
+      console.log(`adzuna: ${kept} filtradas de ${raw.length}`);
+    } catch (e) {
+      console.error(`adzuna falhou: ${e.message} — seguindo sem ela`);
+    }
   }
 
   // dedupe por url (sem url, vale o id) — remoteOnly filtra antes

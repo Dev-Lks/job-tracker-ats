@@ -35,12 +35,14 @@ export async function loadProfile() {
 
 // score simples p/ rankear vagas no Telegram: estágio > júnior, remoto +, overlap de tags
 export function rankJob(j, profile) {
-  const hay = [j.title, (j.tags || []).join(" ")].join(" ").toLowerCase()
-    .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const strip = (s) => String(s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const hay = strip([j.title, (j.tags || []).join(" ")].join(" "));
+  const normLoc = (x) => strip(x.location);
   let s = 0;
   if (/estag|stage|intern|trainee/.test(hay)) s += 40;
-  else if (/junior|júnior|\bjr\b|entry/.test(hay)) s += 25;
+  else if (/junior|junior|\bjr\b|entry/.test(hay)) s += 25;
   if (j.remote) s += 20;
+  if (/brasil|brazil|home office|teletrabalho/.test(hay + " " + normLoc(j))) s += 10;
   const mine = new Set([...profile.skills, ...profile.languages].map((x) => x.toLowerCase()));
   const over = (j.tags || []).filter((t) => mine.has(String(t).toLowerCase())).length;
   s += Math.min(20, over * 4);

@@ -75,12 +75,17 @@ ok(got.startsWith('"title","company","status"'), "exportCSV gera cabeçalho");
   ok(cfg.remoteOnly === true && cfg.sources.includes("remotive"), "loadConfig lê o config (remoteOnly)");
   const pool = sc.applyFilters([{ remote: true }, { remote: false }, { remote: true }], { remoteOnly: true, limit: 2 });
   ok(pool.length === 2 && pool.every(j => j.remote), "applyFilters: só remoto + limit");
+  // Adzuna BR
+  const z = sc.normalizeAdzuna({ id: 123, title: "<strong>Estágio React</strong>", company: { display_name: "Acme BR" }, location: { display_name: "São Paulo, Brasil" }, redirect_url: "https://x", category: { label: "IT" }, created: "2026-10-01T00:00:00Z", description: "home office" });
+  ok(z.source === "adzuna" && z.remote === true && z.title === "Estágio React", "normalizeAdzuna OK (limpa HTML, detecta remoto BR)");
   sc.configure(); // volta pros defaults
   // tailor: rank + CV adaptado
   const tl = await import("../scripts/tailor.mjs");
   const fakeJob = { id: "t1", title: "Estágio React", company: "Acme", url: "https://x", location: "Remoto", remote: true, tags: ["React", "Node.js"], source: "test" };
   ok(tl.rankJob(fakeJob, profile) >= 50, `rankJob prioriza estágio remoto com overlap (veio ${tl.rankJob(fakeJob, profile)})`);
   ok(tl.rankJob({ title: "Senior Manager", company: "X", tags: [] }, profile) < 30, "rankJob rebaixa sênior sem overlap");
+  const brJob = { ...fakeJob, location: "São Paulo, Brasil" };
+  ok(tl.rankJob(brJob, profile) > tl.rankJob(fakeJob, profile), "rankJob dá +10 pra vaga BR");
   const sum = tl.buildSummary(profile, fakeJob);
   ok(sum.includes("Estágio React") && sum.length > 100, "buildSummary adapta pro cargo");
   const t = await tl.tailorForJob(fakeJob, profile);
