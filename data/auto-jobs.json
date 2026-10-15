@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-15T00:55:19.078Z",
-  "count": 3,
+  "updated_at": "2026-10-15T08:27:33.032Z",
+  "count": 4,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -52,21 +52,22 @@
   },
   "jobs": [
     {
-      "id": "arbeitnow-remote-stage-lopen-bij-cordaan-je-opleiding-in-de-praktijk-amsterdam-en-omgeving-363183",
-      "title": "Stage lopen bij Cordaan: Je opleiding in de praktijk",
-      "company": "Cordaan",
-      "url": "https://www.arbeitnow.nl/jobs/companies/cordaan/remote-stage-lopen-bij-cordaan-je-opleiding-in-de-praktijk-amsterdam-en-omgeving-363183",
-      "location": "Werken op afstand",
+      "id": "arbeitnow-praktikum-im-online-marketing-marketing-projektmanagement-bielefeld-311115",
+      "title": "Praktikum im Online-Marketing / Marketing / Projektmanagement",
+      "company": "SEOMATIK GmbH",
+      "url": "https://www.arbeitnow.com/jobs/companies/seomatik-gmbh/praktikum-im-online-marketing-marketing-projektmanagement-bielefeld-311115",
+      "location": "Bielefeld",
       "remote": true,
       "tags": [
-        "Stage",
         "Remote",
-        "Student school",
+        "Online Marketing",
+        "Praktikum",
         "internship",
+        "hilfstätigkeit / student",
         "intern"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-10-14T20:32:33.000Z"
+      "published_at": "2026-10-15T05:30:47.000Z"
     },
     {
       "id": "remotive-1680495",
@@ -91,6 +92,23 @@
       ],
       "source": "remotive",
       "published_at": "2026-10-11T20:17:27"
+    },
+    {
+      "id": "arbeitnow-remote-stage-lopen-bij-cordaan-je-opleiding-in-de-praktijk-amsterdam-en-omgeving-363183",
+      "title": "Stage lopen bij Cordaan: Je opleiding in de praktijk",
+      "company": "Cordaan",
+      "url": "https://www.arbeitnow.nl/jobs/companies/cordaan/remote-stage-lopen-bij-cordaan-je-opleiding-in-de-praktijk-amsterdam-en-omgeving-363183",
+      "location": "Werken op afstand",
+      "remote": true,
+      "tags": [
+        "Stage",
+        "Remote",
+        "Student school",
+        "internship",
+        "intern"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-10-14T20:32:33.000Z"
     },
     {
       "id": "arbeitnow-fullstack-software-engineer-ror-js-w-m-paris-363056",

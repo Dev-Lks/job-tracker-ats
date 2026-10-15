@@ -98,3 +98,33 @@ pulando URLs já presentes).
 > Nota: o `data/auto-jobs.json` servido no Pages é demo. E aviso honesto: essas APIs grátis
 > cobrem bem o mercado remoto gringo, mas quase nada de estágio BR — pra Gupy/LinkedIn BR,
 > cadastre manual (ou CSV) e use o pipeline do mesmo jeito.
+
+## Monitor Telegram 24/7 (aprovação + CV automático)
+
+Fluxo: a cada 6h o `scripts/watch.mjs` roda o scrape, rankeia (estágio +40, júnior +25,
+remoto +20, overlap com suas skills até +20) e manda o top 5 no Telegram com botões
+**✅ Aprovar / ❌ Ignorar**. Aprovar → gera o CV adaptado (`out/CV-*.html` + `.md`) e te
+devolve o arquivo no chat. O envio final na vaga continua manual (cada site exige login).
+
+### O que me mandar (2 coisas)
+
+1. **Token do bot**: fale com `@BotFather` → `/newbot` → ele devolve o token.
+2. **Seu chat ID**: fale com `@userinfobot` → ele devolve o número.
+
+### Onde colocar (escolha 1)
+
+- **Local (watch 24/7)**: copie `scripts/.env.example` pra `scripts/.env` e preencha.
+  O `.env` é gitignored — nunca vai pro GitHub.
+- **Nuvem (backup a cada 6h)**: repo → Settings → Secrets → `TELEGRAM_BOT_TOKEN` e
+  `TELEGRAM_CHAT_ID`. O workflow `watch.yml` pula sozinho se não houver secrets.
+
+### Rodar
+
+```bash
+node scripts/watch.mjs          # 24/7: deixe o terminal aberto (ciclo 6h + escuta)
+node scripts/watch.mjs --once   # 1 ciclo (teste / cron)
+node test/smoke.js              # 28 testes, zero deps (não manda nada sem token)
+```
+
+Na primeira mensagem mande `/start` pro bot. Estado local (`seen.json`, `decisions.json`,
+`out/`) fica só na sua máquina, fora do git.

@@ -3,3 +3,8 @@ Thumbs.db
 *.log
 # Perfil real: só local, nunca commitar (demo usa profile.example.json)
 data/profile.json
+# Estado local do monitor Telegram (vagas já vistas, decisões) + CVs gerados
+scripts/.env
+data/seen.json
+data/decisions.json
+out/
