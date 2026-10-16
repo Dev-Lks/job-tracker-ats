@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-15T15:25:47.918Z",
-  "count": 14,
+  "updated_at": "2026-10-16T15:05:17.230Z",
+  "count": 15,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -62,6 +62,26 @@
   },
   "jobs": [
     {
+      "id": "arbeitnow-frontend-softwareentwickler-berlin-250708",
+      "title": "Frontend Softwareentwickler (m/w/d)",
+      "company": "TecFox GmbH",
+      "url": "https://www.arbeitnow.com/jobs/companies/tecfox-gmbh/frontend-softwareentwickler-berlin-250708",
+      "location": "Berlin",
+      "remote": true,
+      "tags": [
+        "Remote",
+        "Web Development",
+        "Unbefristeter arbeitsvertrag",
+        "berufserfahren",
+        "intern",
+        "react",
+        "typescript",
+        "frontend"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-10-16T13:01:21.000Z"
+    },
+    {
       "id": "github-backend-br-vagas-12470",
       "title": "Engenheiro (a) de Software-Github /Micro 1",
       "company": "",
@@ -79,22 +99,24 @@
       "published_at": "2026-10-15T14:33:24Z"
     },
     {
-      "id": "arbeitnow-fullstack-software-engineer-ror-js-w-m-paris-363056",
-      "title": "Fullstack Software Engineer RoR/JS W/M",
-      "company": "Pennylane SAS",
-      "url": "https://www.arbeitnow.fr/jobs/companies/pennylane-sas/fullstack-software-engineer-ror-js-w-m-paris-363056",
-      "location": "All France (remote)",
+      "id": "arbeitnow-fullstack-softwareentwickler-berlin-149961",
+      "title": "Fullstack Softwareentwickler (m/w/d)",
+      "company": "TecFox GmbH",
+      "url": "https://www.arbeitnow.com/jobs/companies/tecfox-gmbh/fullstack-softwareentwickler-berlin-149961",
+      "location": "Berlin",
       "remote": true,
       "tags": [
-        "Tech",
-        "Full Time",
+        "Remote",
+        "Web Development",
+        "Unbefristeter arbeitsvertrag",
+        "berufserfahren",
         "intern",
-        "javascript",
         "fullstack",
-        "full stack"
+        "frontend",
+        "backend"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-10-14T17:40:23.000Z"
+      "published_at": "2026-10-16T12:31:06.000Z"
     },
     {
       "id": "github-backend-br-vagas-12469",
