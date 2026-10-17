@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-16T15:05:17.230Z",
-  "count": 15,
+  "updated_at": "2026-10-17T14:00:05.917Z",
+  "count": 14,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -62,24 +62,28 @@
   },
   "jobs": [
     {
-      "id": "arbeitnow-frontend-softwareentwickler-berlin-250708",
-      "title": "Frontend Softwareentwickler (m/w/d)",
-      "company": "TecFox GmbH",
-      "url": "https://www.arbeitnow.com/jobs/companies/tecfox-gmbh/frontend-softwareentwickler-berlin-250708",
-      "location": "Berlin",
+      "id": "arbeitnow-full-stack-engineer-ai-authoring-platform-hamburg-483900",
+      "title": "Full-Stack Engineer — AI Authoring Platform",
+      "company": "Tracium GmbH",
+      "url": "https://www.arbeitnow.com/jobs/companies/tracium-gmbh/full-stack-engineer-ai-authoring-platform-hamburg-483900",
+      "location": "Hamburg",
       "remote": true,
       "tags": [
         "Remote",
-        "Web Development",
-        "Unbefristeter arbeitsvertrag",
-        "berufserfahren",
-        "intern",
+        "Software Development",
+        "Freelancer / indepedent contractor",
+        "freelance",
+        "professional / experienced",
         "react",
+        "node",
         "typescript",
-        "frontend"
+        "python",
+        "full-stack",
+        "frontend",
+        "backend"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-10-16T13:01:21.000Z"
+      "published_at": "2026-10-17T11:47:20.000Z"
     },
     {
       "id": "github-backend-br-vagas-12470",
@@ -97,26 +101,6 @@
       ],
       "source": "github",
       "published_at": "2026-10-15T14:33:24Z"
-    },
-    {
-      "id": "arbeitnow-fullstack-softwareentwickler-berlin-149961",
-      "title": "Fullstack Softwareentwickler (m/w/d)",
-      "company": "TecFox GmbH",
-      "url": "https://www.arbeitnow.com/jobs/companies/tecfox-gmbh/fullstack-softwareentwickler-berlin-149961",
-      "location": "Berlin",
-      "remote": true,
-      "tags": [
-        "Remote",
-        "Web Development",
-        "Unbefristeter arbeitsvertrag",
-        "berufserfahren",
-        "intern",
-        "fullstack",
-        "frontend",
-        "backend"
-      ],
-      "source": "arbeitnow",
-      "published_at": "2026-10-16T12:31:06.000Z"
     },
     {
       "id": "github-backend-br-vagas-12469",
