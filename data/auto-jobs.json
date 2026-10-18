@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-17T14:00:05.917Z",
-  "count": 14,
+  "updated_at": "2026-10-18T14:13:01.144Z",
+  "count": 17,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -62,28 +62,88 @@
   },
   "jobs": [
     {
-      "id": "arbeitnow-full-stack-engineer-ai-authoring-platform-hamburg-483900",
-      "title": "Full-Stack Engineer — AI Authoring Platform",
-      "company": "Tracium GmbH",
-      "url": "https://www.arbeitnow.com/jobs/companies/tracium-gmbh/full-stack-engineer-ai-authoring-platform-hamburg-483900",
-      "location": "Hamburg",
+      "id": "arbeitnow-backend-developer-net-remote-from-eu-deadline-27-10-26-the-hague-27129",
+      "title": "Backend Developer .Net - Remote from EU - Deadline 27/10/26",
+      "company": "AlmavivA de Belgique",
+      "url": "https://www.arbeitnow.nl/jobs/companies/almaviva-de-belgique/backend-developer-net-remote-from-eu-deadline-27-10-26-the-hague-27129",
+      "location": "Remote job",
       "remote": true,
       "tags": [
         "Remote",
-        "Software Development",
-        "Freelancer / indepedent contractor",
+        "Experienced",
         "freelance",
-        "professional / experienced",
-        "react",
-        "node",
-        "typescript",
-        "python",
-        "full-stack",
-        "frontend",
-        "backend"
+        "intern",
+        "full stack",
+        "backend",
+        "back-end"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-10-17T11:47:20.000Z"
+      "published_at": "2026-10-18T11:31:16.000Z"
+    },
+    {
+      "id": "github-react-brasil-vagas-3034",
+      "title": "Full Stack Developer (React) Júnior na Rotha IA",
+      "company": "Rotha IA",
+      "url": "https://github.com/react-brasil/vagas/issues/3034",
+      "location": "🏢 Remoto",
+      "remote": true,
+      "tags": [
+        "🏢 Remoto",
+        "⚖️ PJ",
+        "👦 Junior",
+        "⚖️ Freela",
+        "junior",
+        "júnior",
+        "react",
+        "full stack",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-10-17T18:46:05Z"
+    },
+    {
+      "id": "github-backend-br-vagas-12471",
+      "title": "Full Stack Developer Júnior",
+      "company": "Rotha IA",
+      "url": "https://github.com/backend-br/vagas/issues/12471",
+      "location": "Remoto",
+      "remote": true,
+      "tags": [
+        "PJ",
+        "Júnior",
+        "Remoto",
+        "Testes automatizados",
+        "TypeScript",
+        "PostgreSQL",
+        "SQL",
+        "Git",
+        "junior",
+        "júnior",
+        "typescript",
+        "full stack"
+      ],
+      "source": "github",
+      "published_at": "2026-10-17T18:46:03Z"
+    },
+    {
+      "id": "github-frontendbr-vagas-8569",
+      "title": "Full Stack Developer Júnior na Rotha IA",
+      "company": "Rotha IA",
+      "url": "https://github.com/frontendbr/vagas/issues/8569",
+      "location": "Remoto",
+      "remote": true,
+      "tags": [
+        "Júnior",
+        "PJ",
+        "Freela",
+        "Remoto",
+        "junior",
+        "júnior",
+        "full stack",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-10-17T18:46:01Z"
     },
     {
       "id": "github-backend-br-vagas-12470",
