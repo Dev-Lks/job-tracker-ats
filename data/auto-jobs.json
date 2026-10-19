@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-18T14:13:01.144Z",
-  "count": 17,
+  "updated_at": "2026-10-19T17:17:19.682Z",
+  "count": 19,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -62,23 +62,60 @@
   },
   "jobs": [
     {
-      "id": "arbeitnow-backend-developer-net-remote-from-eu-deadline-27-10-26-the-hague-27129",
-      "title": "Backend Developer .Net - Remote from EU - Deadline 27/10/26",
-      "company": "AlmavivA de Belgique",
-      "url": "https://www.arbeitnow.nl/jobs/companies/almaviva-de-belgique/backend-developer-net-remote-from-eu-deadline-27-10-26-the-hague-27129",
-      "location": "Remote job",
+      "id": "github-frontendbr-vagas-8571",
+      "title": "It Jobs",
+      "company": "Strider/ Micro 1",
+      "url": "https://github.com/frontendbr/vagas/issues/8571",
+      "location": "Remoto",
+      "remote": true,
+      "tags": [
+        "Remoto",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-10-19T16:48:53Z"
+    },
+    {
+      "id": "arbeitnow-fullstack-entwicklerin-zurich-17174",
+      "title": "Fullstack Entwickler:in",
+      "company": "Coopers Group AG",
+      "url": "https://www.arbeitnow.ch/jobs/companies/coopers-group-ag/fullstack-entwicklerin-zurich-17174",
+      "location": "Zürich",
       "remote": true,
       "tags": [
         "Remote",
-        "Experienced",
-        "freelance",
-        "intern",
-        "full stack",
-        "backend",
-        "back-end"
+        "IT",
+        "Befristeter arbeitsvertrag",
+        "contract",
+        "fullstack",
+        "frontend"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-10-18T11:31:16.000Z"
+      "published_at": "2026-10-19T06:30:46.000Z"
+    },
+    {
+      "id": "github-backend-br-vagas-12473",
+      "title": "It Jobs - Strider",
+      "company": "Micro 1",
+      "url": "https://github.com/backend-br/vagas/issues/12473",
+      "location": "Remoto",
+      "remote": true,
+      "tags": [
+        "Python",
+        "Node.js",
+        "Remoto",
+        "AWS",
+        "MySQL",
+        "TypeScript",
+        "SQL",
+        "CI/CD",
+        "node",
+        "typescript",
+        "python",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-10-19T16:46:59Z"
     },
     {
       "id": "github-react-brasil-vagas-3034",
