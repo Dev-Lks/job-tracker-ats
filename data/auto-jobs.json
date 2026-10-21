@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-20T15:30:56.542Z",
+  "updated_at": "2026-10-21T15:47:14.546Z",
   "count": 20,
   "filters": {
     "remoteOnly": true,
@@ -62,20 +62,20 @@
   },
   "jobs": [
     {
-      "id": "arbeitnow-remote-backend-engineer-ruby-create-change-record-484067",
-      "title": "Backend Engineer (Ruby), Create: Change Record",
-      "company": "gitlab",
-      "url": "https://www.arbeitnow.co.uk/jobs/companies/gitlab/remote-backend-engineer-ruby-create-change-record-484067",
-      "location": "Remote",
+      "id": "arbeitnow-python-amp-cloud-native-software-engineer-76078-winterthur-74030",
+      "title": "Python &amp; Cloud Native Software Engineer (76078)",
+      "company": "IQ Plus AG",
+      "url": "https://www.arbeitnow.ch/jobs/companies/iq-plus-ag/python-amp-cloud-native-software-engineer-76078-winterthur-74030",
+      "location": "Winterthur",
       "remote": true,
       "tags": [
-        "DevOps Engineering",
-        "full-stack",
-        "frontend",
-        "backend"
+        "Remote",
+        "Software Development",
+        "Unbefristeter arbeitsvertrag",
+        "python"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-10-20T08:55:26.000Z"
+      "published_at": "2026-10-21T15:00:50.000Z"
     },
     {
       "id": "github-backend-br-vagas-12474",
