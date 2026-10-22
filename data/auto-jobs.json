@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-21T15:47:14.546Z",
-  "count": 20,
+  "updated_at": "2026-10-22T15:45:30.480Z",
+  "count": 21,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -62,20 +62,21 @@
   },
   "jobs": [
     {
-      "id": "arbeitnow-python-amp-cloud-native-software-engineer-76078-winterthur-74030",
-      "title": "Python &amp; Cloud Native Software Engineer (76078)",
-      "company": "IQ Plus AG",
-      "url": "https://www.arbeitnow.ch/jobs/companies/iq-plus-ag/python-amp-cloud-native-software-engineer-76078-winterthur-74030",
-      "location": "Winterthur",
+      "id": "arbeitnow-remote-full-stack-engineer-frontend-leaning-studio-291198",
+      "title": "Full-Stack Engineer (Frontend Leaning) - Studio",
+      "company": "ElevenLabs",
+      "url": "https://www.arbeitnow.com/jobs/companies/elevenlabs/remote-full-stack-engineer-frontend-leaning-studio-291198",
+      "location": "Remote",
       "remote": true,
       "tags": [
-        "Remote",
-        "Software Development",
-        "Unbefristeter arbeitsvertrag",
-        "python"
+        "Engineering & Product",
+        "Full Time",
+        "full-stack",
+        "frontend",
+        "backend"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-10-21T15:00:50.000Z"
+      "published_at": "2026-10-22T11:40:29.000Z"
     },
     {
       "id": "github-backend-br-vagas-12474",
@@ -100,6 +101,22 @@
       ],
       "source": "github",
       "published_at": "2026-10-19T20:18:45Z"
+    },
+    {
+      "id": "arbeitnow-python-amp-cloud-native-software-engineer-76078-winterthur-74030",
+      "title": "Python &amp; Cloud Native Software Engineer (76078)",
+      "company": "IQ Plus AG",
+      "url": "https://www.arbeitnow.ch/jobs/companies/iq-plus-ag/python-amp-cloud-native-software-engineer-76078-winterthur-74030",
+      "location": "Winterthur",
+      "remote": true,
+      "tags": [
+        "Remote",
+        "Software Development",
+        "Unbefristeter arbeitsvertrag",
+        "python"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-10-21T15:00:50.000Z"
     },
     {
       "id": "github-frontendbr-vagas-8571",
