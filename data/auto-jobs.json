@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-22T15:45:30.480Z",
+  "updated_at": "2026-10-23T15:34:37.182Z",
   "count": 21,
   "filters": {
     "remoteOnly": true,
@@ -62,21 +62,24 @@
   },
   "jobs": [
     {
-      "id": "arbeitnow-remote-full-stack-engineer-frontend-leaning-studio-291198",
-      "title": "Full-Stack Engineer (Frontend Leaning) - Studio",
-      "company": "ElevenLabs",
-      "url": "https://www.arbeitnow.com/jobs/companies/elevenlabs/remote-full-stack-engineer-frontend-leaning-studio-291198",
-      "location": "Remote",
+      "id": "arbeitnow-backend-software-engineer-rust-ai-first-e-commerce-tech-berlin-334474",
+      "title": "Backend Software Engineer (m/f/d), Rust – AI-first E-commerce Tech",
+      "company": "adstrong",
+      "url": "https://www.arbeitnow.com/jobs/companies/adstrong/backend-software-engineer-rust-ai-first-e-commerce-tech-berlin-334474",
+      "location": "Berlin",
       "remote": true,
       "tags": [
-        "Engineering & Product",
-        "Full Time",
-        "full-stack",
+        "Remote",
+        "Software Development",
+        "Permanent employment",
+        "professional / experienced",
+        "typescript",
+        "python",
         "frontend",
         "backend"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-10-22T11:40:29.000Z"
+      "published_at": "2026-10-23T13:47:35.000Z"
     },
     {
       "id": "github-backend-br-vagas-12474",
@@ -103,20 +106,23 @@
       "published_at": "2026-10-19T20:18:45Z"
     },
     {
-      "id": "arbeitnow-python-amp-cloud-native-software-engineer-76078-winterthur-74030",
-      "title": "Python &amp; Cloud Native Software Engineer (76078)",
-      "company": "IQ Plus AG",
-      "url": "https://www.arbeitnow.ch/jobs/companies/iq-plus-ag/python-amp-cloud-native-software-engineer-76078-winterthur-74030",
-      "location": "Winterthur",
+      "id": "arbeitnow-backend-developer-net-remote-from-eu-deadline-27-10-26-the-hague-434774",
+      "title": "Backend Developer .Net - Remote from EU - Deadline 27/10/26",
+      "company": "AlmavivA de Belgique",
+      "url": "https://www.arbeitnow.nl/jobs/companies/almaviva-de-belgique/backend-developer-net-remote-from-eu-deadline-27-10-26-the-hague-434774",
+      "location": "Remote job",
       "remote": true,
       "tags": [
         "Remote",
-        "Software Development",
-        "Unbefristeter arbeitsvertrag",
-        "python"
+        "Experienced",
+        "freelance",
+        "intern",
+        "full stack",
+        "backend",
+        "back-end"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-10-21T15:00:50.000Z"
+      "published_at": "2026-10-23T02:31:10.000Z"
     },
     {
       "id": "github-frontendbr-vagas-8571",
