@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-23T15:34:37.182Z",
+  "updated_at": "2026-10-24T14:11:20.011Z",
   "count": 21,
   "filters": {
     "remoteOnly": true,
@@ -62,24 +62,24 @@
   },
   "jobs": [
     {
-      "id": "arbeitnow-backend-software-engineer-rust-ai-first-e-commerce-tech-berlin-334474",
-      "title": "Backend Software Engineer (m/f/d), Rust – AI-first E-commerce Tech",
-      "company": "adstrong",
-      "url": "https://www.arbeitnow.com/jobs/companies/adstrong/backend-software-engineer-rust-ai-first-e-commerce-tech-berlin-334474",
-      "location": "Berlin",
+      "id": "arbeitnow-backend-engineer-zug-145470",
+      "title": "Backend Engineer",
+      "company": "Blockvora",
+      "url": "https://www.arbeitnow.ch/jobs/companies/blockvora/backend-engineer-zug-145470",
+      "location": "Zug",
       "remote": true,
       "tags": [
         "Remote",
         "Software Development",
         "Permanent employment",
         "professional / experienced",
+        "node",
         "typescript",
         "python",
-        "frontend",
         "backend"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-10-23T13:47:35.000Z"
+      "published_at": "2026-10-23T18:00:51.000Z"
     },
     {
       "id": "github-backend-br-vagas-12474",
@@ -375,6 +375,7 @@
       "tags": [
         "Remoto",
         "SQL",
+        "Stale",
         "back-end",
         "remoto"
       ],
