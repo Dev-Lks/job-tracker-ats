@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-24T14:11:20.011Z",
-  "count": 21,
+  "updated_at": "2026-10-25T14:42:44.417Z",
+  "count": 19,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -62,26 +62,6 @@
   },
   "jobs": [
     {
-      "id": "arbeitnow-backend-engineer-zug-145470",
-      "title": "Backend Engineer",
-      "company": "Blockvora",
-      "url": "https://www.arbeitnow.ch/jobs/companies/blockvora/backend-engineer-zug-145470",
-      "location": "Zug",
-      "remote": true,
-      "tags": [
-        "Remote",
-        "Software Development",
-        "Permanent employment",
-        "professional / experienced",
-        "node",
-        "typescript",
-        "python",
-        "backend"
-      ],
-      "source": "arbeitnow",
-      "published_at": "2026-10-23T18:00:51.000Z"
-    },
-    {
       "id": "github-backend-br-vagas-12474",
       "title": "Back-end Developer JR",
       "company": "PORT LOUIS",
@@ -96,33 +76,14 @@
         "MySQL",
         "TypeScript",
         "PostgreSQL",
+        "formato-sugerido",
         "junior",
         "júnior",
         "jr",
-        "typescript",
-        "back-end"
+        "typescript"
       ],
       "source": "github",
       "published_at": "2026-10-19T20:18:45Z"
-    },
-    {
-      "id": "arbeitnow-backend-developer-net-remote-from-eu-deadline-27-10-26-the-hague-434774",
-      "title": "Backend Developer .Net - Remote from EU - Deadline 27/10/26",
-      "company": "AlmavivA de Belgique",
-      "url": "https://www.arbeitnow.nl/jobs/companies/almaviva-de-belgique/backend-developer-net-remote-from-eu-deadline-27-10-26-the-hague-434774",
-      "location": "Remote job",
-      "remote": true,
-      "tags": [
-        "Remote",
-        "Experienced",
-        "freelance",
-        "intern",
-        "full stack",
-        "backend",
-        "back-end"
-      ],
-      "source": "arbeitnow",
-      "published_at": "2026-10-23T02:31:10.000Z"
     },
     {
       "id": "github-frontendbr-vagas-8571",
@@ -238,6 +199,7 @@
         "Python",
         "Java",
         "Remoto",
+        "formato-sugerido",
         "python",
         "remoto"
       ],
@@ -255,6 +217,7 @@
         "Python",
         "Java",
         "Remoto",
+        "formato-sugerido",
         "python",
         "remoto"
       ],
@@ -272,6 +235,7 @@
         "Python",
         "Remoto",
         "GCP",
+        "formato-sugerido",
         "python",
         "remoto"
       ],
@@ -316,11 +280,11 @@
         "Remoto",
         "Testes automatizados",
         "TypeScript",
+        "formato-sugerido",
         "node",
         "typescript",
         "python",
-        "back-end",
-        "remoto"
+        "back-end"
       ],
       "source": "github",
       "published_at": "2026-10-10T19:44:18Z"
@@ -375,7 +339,7 @@
       "tags": [
         "Remoto",
         "SQL",
-        "Stale",
+        "formato-sugerido",
         "back-end",
         "remoto"
       ],
