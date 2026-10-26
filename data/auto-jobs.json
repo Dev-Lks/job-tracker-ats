@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-25T14:42:44.417Z",
-  "count": 19,
+  "updated_at": "2026-10-26T17:04:48.805Z",
+  "count": 15,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -124,71 +124,6 @@
       "published_at": "2026-10-19T16:46:59Z"
     },
     {
-      "id": "github-react-brasil-vagas-3034",
-      "title": "Full Stack Developer (React) Júnior na Rotha IA",
-      "company": "Rotha IA",
-      "url": "https://github.com/react-brasil/vagas/issues/3034",
-      "location": "🏢 Remoto",
-      "remote": true,
-      "tags": [
-        "🏢 Remoto",
-        "⚖️ PJ",
-        "👦 Junior",
-        "⚖️ Freela",
-        "junior",
-        "júnior",
-        "react",
-        "full stack",
-        "remoto"
-      ],
-      "source": "github",
-      "published_at": "2026-10-17T18:46:05Z"
-    },
-    {
-      "id": "github-backend-br-vagas-12471",
-      "title": "Full Stack Developer Júnior",
-      "company": "Rotha IA",
-      "url": "https://github.com/backend-br/vagas/issues/12471",
-      "location": "Remoto",
-      "remote": true,
-      "tags": [
-        "PJ",
-        "Júnior",
-        "Remoto",
-        "Testes automatizados",
-        "TypeScript",
-        "PostgreSQL",
-        "SQL",
-        "Git",
-        "junior",
-        "júnior",
-        "typescript",
-        "full stack"
-      ],
-      "source": "github",
-      "published_at": "2026-10-17T18:46:03Z"
-    },
-    {
-      "id": "github-frontendbr-vagas-8569",
-      "title": "Full Stack Developer Júnior na Rotha IA",
-      "company": "Rotha IA",
-      "url": "https://github.com/frontendbr/vagas/issues/8569",
-      "location": "Remoto",
-      "remote": true,
-      "tags": [
-        "Júnior",
-        "PJ",
-        "Freela",
-        "Remoto",
-        "junior",
-        "júnior",
-        "full stack",
-        "remoto"
-      ],
-      "source": "github",
-      "published_at": "2026-10-17T18:46:01Z"
-    },
-    {
       "id": "github-backend-br-vagas-12470",
       "title": "Engenheiro (a) de Software-Github /Micro 1",
       "company": "",
@@ -288,30 +223,6 @@
       ],
       "source": "github",
       "published_at": "2026-10-10T19:44:18Z"
-    },
-    {
-      "id": "github-backend-br-vagas-12441",
-      "title": "Full Stack Developer",
-      "company": "Cogfy",
-      "url": "https://github.com/backend-br/vagas/issues/12441",
-      "location": "Remoto",
-      "remote": true,
-      "tags": [
-        "PJ",
-        "Node.js",
-        "Remoto",
-        "Testes automatizados",
-        "TypeScript",
-        "PostgreSQL",
-        "Docker",
-        "Kubernetes",
-        "node",
-        "typescript",
-        "full stack",
-        "remoto"
-      ],
-      "source": "github",
-      "published_at": "2026-10-09T15:07:16Z"
     },
     {
       "id": "github-frontendbr-vagas-8566",
