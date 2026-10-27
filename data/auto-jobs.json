@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-26T17:04:48.805Z",
-  "count": 15,
+  "updated_at": "2026-10-27T16:08:15.464Z",
+  "count": 17,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -62,6 +62,25 @@
   },
   "jobs": [
     {
+      "id": "arbeitnow-ki-entwickler-llm-rag-agenten-python-oder-typescript-berlin-207271",
+      "title": "KI-Entwickler LLM / RAG / Agenten – Python oder TypeScript (m/w/d)",
+      "company": "Rockstardevelopers GmbH",
+      "url": "https://www.arbeitnow.com/jobs/companies/rockstardevelopers-gmbh/ki-entwickler-llm-rag-agenten-python-oder-typescript-berlin-207271",
+      "location": "Berlin",
+      "remote": true,
+      "tags": [
+        "Remote",
+        "Software Development",
+        "Unbefristeter arbeitsvertrag",
+        "berufserfahren",
+        "intern",
+        "typescript",
+        "python"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-10-27T14:31:07.000Z"
+    },
+    {
       "id": "github-backend-br-vagas-12474",
       "title": "Back-end Developer JR",
       "company": "PORT LOUIS",
@@ -84,6 +103,29 @@
       ],
       "source": "github",
       "published_at": "2026-10-19T20:18:45Z"
+    },
+    {
+      "id": "arbeitnow-fullstack-entwickler-typescript-nodejs-angular-ki-integration-berlin-298234",
+      "title": "Fullstack Entwickler TypeScript – Node.js / Angular, KI-Integration (m/w/d)",
+      "company": "Rockstardevelopers GmbH",
+      "url": "https://www.arbeitnow.com/jobs/companies/rockstardevelopers-gmbh/fullstack-entwickler-typescript-nodejs-angular-ki-integration-berlin-298234",
+      "location": "Berlin",
+      "remote": true,
+      "tags": [
+        "Remote",
+        "Software Development",
+        "Unbefristeter arbeitsvertrag",
+        "berufserfahren",
+        "intern",
+        "react",
+        "node",
+        "typescript",
+        "fullstack",
+        "frontend",
+        "backend"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-10-27T14:31:07.000Z"
     },
     {
       "id": "github-frontendbr-vagas-8571",
@@ -293,6 +335,7 @@
       "remote": true,
       "tags": [
         "Remoto",
+        "Stale",
         "full-stack",
         "remoto"
       ],
