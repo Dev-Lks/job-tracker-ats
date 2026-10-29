@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-28T16:56:02.100Z",
-  "count": 16,
+  "updated_at": "2026-10-29T17:13:24.623Z",
+  "count": 15,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -62,26 +62,26 @@
   },
   "jobs": [
     {
-      "id": "arbeitnow-backend-engineer-nodejs-typescript-berlin-291955",
-      "title": "Backend Engineer (Node.js / TypeScript)",
-      "company": "Nexoya",
-      "url": "https://www.arbeitnow.com/jobs/companies/nexoya/backend-engineer-nodejs-typescript-berlin-291955",
-      "location": "Berlin",
+      "id": "arbeitnow-fullstack-entwickler-mit-php-backend-symfony-rabbitmq-stuttgart-241857",
+      "title": "Fullstack Entwickler mit PHP-Backend – Symfony, RabbitMQ (m/w/d)",
+      "company": "Rockstardevelopers GmbH",
+      "url": "https://www.arbeitnow.com/jobs/companies/rockstardevelopers-gmbh/fullstack-entwickler-mit-php-backend-symfony-rabbitmq-stuttgart-241857",
+      "location": "Stuttgart",
       "remote": true,
       "tags": [
         "Remote",
-        "Engineering",
-        "Freelancer / indepedent contractor",
-        "freelance",
-        "professional / experienced",
+        "Software Development",
+        "Unbefristeter arbeitsvertrag",
+        "berufserfahren",
         "intern",
-        "node",
+        "react",
         "typescript",
+        "fullstack",
         "frontend",
         "backend"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-10-28T15:01:38.000Z"
+      "published_at": "2026-10-29T15:01:25.000Z"
     },
     {
       "id": "github-frontendbr-vagas-8571",
@@ -96,28 +96,6 @@
       ],
       "source": "github",
       "published_at": "2026-10-19T16:48:53Z"
-    },
-    {
-      "id": "arbeitnow-freelance-full-stack-developer-django-ai-products-python-llm-integration-remote-100-stuttgart-200558",
-      "title": "Freelance Full-Stack Developer | Django | AI Products | Python & LLM Integration | Remote 100%",
-      "company": "hurra.com",
-      "url": "https://www.arbeitnow.com/jobs/companies/hurracom/freelance-full-stack-developer-django-ai-products-python-llm-integration-remote-100-stuttgart-200558",
-      "location": "Stuttgart",
-      "remote": true,
-      "tags": [
-        "Remote",
-        "Web Development",
-        "Freelancer / indepedent contractor",
-        "freelance",
-        "professional / experienced",
-        "python",
-        "full-stack",
-        "full stack",
-        "frontend",
-        "front-end"
-      ],
-      "source": "arbeitnow",
-      "published_at": "2026-10-28T13:05:01.000Z"
     },
     {
       "id": "github-backend-br-vagas-12473",
