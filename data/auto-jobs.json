@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-29T17:13:24.623Z",
-  "count": 15,
+  "updated_at": "2026-10-30T16:54:44.385Z",
+  "count": 14,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -61,28 +61,6 @@
     ]
   },
   "jobs": [
-    {
-      "id": "arbeitnow-fullstack-entwickler-mit-php-backend-symfony-rabbitmq-stuttgart-241857",
-      "title": "Fullstack Entwickler mit PHP-Backend – Symfony, RabbitMQ (m/w/d)",
-      "company": "Rockstardevelopers GmbH",
-      "url": "https://www.arbeitnow.com/jobs/companies/rockstardevelopers-gmbh/fullstack-entwickler-mit-php-backend-symfony-rabbitmq-stuttgart-241857",
-      "location": "Stuttgart",
-      "remote": true,
-      "tags": [
-        "Remote",
-        "Software Development",
-        "Unbefristeter arbeitsvertrag",
-        "berufserfahren",
-        "intern",
-        "react",
-        "typescript",
-        "fullstack",
-        "frontend",
-        "backend"
-      ],
-      "source": "arbeitnow",
-      "published_at": "2026-10-29T15:01:25.000Z"
-    },
     {
       "id": "github-frontendbr-vagas-8571",
       "title": "It Jobs",
