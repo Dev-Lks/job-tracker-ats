@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-30T16:54:44.385Z",
-  "count": 14,
+  "updated_at": "2026-10-31T15:55:36.204Z",
+  "count": 11,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -62,6 +62,30 @@
   },
   "jobs": [
     {
+      "id": "remotive-2091165",
+      "title": "Full-Stack Developer",
+      "company": "Fluence International, Inc.",
+      "url": "https://remotive.com/remote-jobs/software-development/full-stack-developer-2091165",
+      "location": "Worldwide",
+      "remote": true,
+      "tags": [
+        "admin",
+        "api",
+        "AWS",
+        "backend",
+        "cloud",
+        "docker",
+        "frontend",
+        "fullstack",
+        "javascript",
+        "react",
+        "security",
+        "UI/UX"
+      ],
+      "source": "remotive",
+      "published_at": "2026-10-29T18:22:41"
+    },
+    {
       "id": "github-frontendbr-vagas-8571",
       "title": "It Jobs",
       "company": "Strider/ Micro 1",
@@ -76,66 +100,6 @@
       "published_at": "2026-10-19T16:48:53Z"
     },
     {
-      "id": "github-backend-br-vagas-12473",
-      "title": "It Jobs - Strider",
-      "company": "Micro 1",
-      "url": "https://github.com/backend-br/vagas/issues/12473",
-      "location": "Remoto",
-      "remote": true,
-      "tags": [
-        "Python",
-        "Node.js",
-        "Remoto",
-        "AWS",
-        "MySQL",
-        "TypeScript",
-        "SQL",
-        "CI/CD",
-        "node",
-        "typescript",
-        "python",
-        "remoto"
-      ],
-      "source": "github",
-      "published_at": "2026-10-19T16:46:59Z"
-    },
-    {
-      "id": "github-backend-br-vagas-12470",
-      "title": "Engenheiro (a) de Software-Github /Micro 1",
-      "company": "",
-      "url": "https://github.com/backend-br/vagas/issues/12470",
-      "location": "Remoto",
-      "remote": true,
-      "tags": [
-        "Python",
-        "Java",
-        "Remoto",
-        "formato-sugerido",
-        "python",
-        "remoto"
-      ],
-      "source": "github",
-      "published_at": "2026-10-15T14:33:24Z"
-    },
-    {
-      "id": "github-backend-br-vagas-12469",
-      "title": "Engenheiro de Software- Micro 1",
-      "company": "",
-      "url": "https://github.com/backend-br/vagas/issues/12469",
-      "location": "Remoto",
-      "remote": true,
-      "tags": [
-        "Python",
-        "Java",
-        "Remoto",
-        "formato-sugerido",
-        "python",
-        "remoto"
-      ],
-      "source": "github",
-      "published_at": "2026-10-15T14:31:11Z"
-    },
-    {
       "id": "github-backend-br-vagas-12451",
       "title": "Forward Deployed Engineer, Gen AI, Google Cloud (English, Portuguese) na Google",
       "company": "Google",
@@ -146,6 +110,7 @@
         "Python",
         "Remoto",
         "GCP",
+        "verificada",
         "formato-sugerido",
         "python",
         "remoto"
@@ -177,30 +142,6 @@
       "published_at": "2026-10-13T19:51:25Z"
     },
     {
-      "id": "github-backend-br-vagas-12442",
-      "title": "Back-end Software Engineer",
-      "company": "Micro1",
-      "url": "https://github.com/backend-br/vagas/issues/12442",
-      "location": "Remoto",
-      "remote": true,
-      "tags": [
-        "Python",
-        "Node.js",
-        "Java",
-        "Go",
-        "Remoto",
-        "Testes automatizados",
-        "TypeScript",
-        "formato-sugerido",
-        "node",
-        "typescript",
-        "python",
-        "back-end"
-      ],
-      "source": "github",
-      "published_at": "2026-10-10T19:44:18Z"
-    },
-    {
       "id": "github-frontendbr-vagas-8566",
       "title": "Full-stack Engineer React.js • UX Design • Node.js",
       "company": "Strider",
@@ -224,8 +165,11 @@
       "location": "Remoto",
       "remote": true,
       "tags": [
+        ".NET",
         "Remoto",
         "SQL",
+        "C#",
+        "verificada",
         "formato-sugerido",
         "back-end",
         "remoto"
