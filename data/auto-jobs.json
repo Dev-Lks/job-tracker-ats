@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-10-31T15:55:36.204Z",
-  "count": 11,
+  "updated_at": "2026-11-01T16:57:59.521Z",
+  "count": 12,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -61,6 +61,27 @@
     ]
   },
   "jobs": [
+    {
+      "id": "arbeitnow-remote-full-stack-developer-java-react-120706",
+      "title": "Full Stack Developer - Java & React (f/m/d)",
+      "company": "ecosio",
+      "url": "https://www.arbeitnow.com/jobs/companies/ecosio/remote-full-stack-developer-java-react-120706",
+      "location": "Austria, Spain, UK, Italy, Hungary, Portugal, Croatia - Remote",
+      "remote": true,
+      "tags": [
+        "Web App Development",
+        "intern",
+        "react",
+        "typescript",
+        "javascript",
+        "full stack",
+        "frontend",
+        "backend",
+        "home office"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-10-31T18:55:28.000Z"
+    },
     {
       "id": "remotive-2091165",
       "title": "Full-Stack Developer",
@@ -205,22 +226,6 @@
       "published_at": "2026-09-17T18:59:30Z"
     },
     {
-      "id": "github-frontendbr-vagas-8552",
-      "title": "Full-stack Engineer",
-      "company": "",
-      "url": "https://github.com/frontendbr/vagas/issues/8552",
-      "location": "Remoto",
-      "remote": true,
-      "tags": [
-        "Remoto",
-        "Stale",
-        "full-stack",
-        "remoto"
-      ],
-      "source": "github",
-      "published_at": "2026-08-28T01:40:18Z"
-    },
-    {
       "id": "github-react-brasil-vagas-3019",
       "title": "Frontend Engineer",
       "company": "Botcity",
@@ -233,6 +238,29 @@
       ],
       "source": "github",
       "published_at": "2026-07-10T20:36:53Z"
+    },
+    {
+      "id": "github-backend-br-vagas-12245",
+      "title": "Full-stack Engineer",
+      "company": "",
+      "url": "https://github.com/backend-br/vagas/issues/12245",
+      "location": "Remoto · ASP",
+      "remote": true,
+      "tags": [
+        ".NET",
+        "Remoto",
+        "AWS",
+        "SQL",
+        "Git",
+        "ASP",
+        "CI/CD",
+        "verificada",
+        "react",
+        "full-stack",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-05-25T16:54:47Z"
     },
     {
       "id": "github-phpdevbr-vagas-1323",
