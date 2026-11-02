@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-01T16:57:59.521Z",
-  "count": 12,
+  "updated_at": "2026-11-02T20:36:18.974Z",
+  "count": 11,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -61,27 +61,6 @@
     ]
   },
   "jobs": [
-    {
-      "id": "arbeitnow-remote-full-stack-developer-java-react-120706",
-      "title": "Full Stack Developer - Java & React (f/m/d)",
-      "company": "ecosio",
-      "url": "https://www.arbeitnow.com/jobs/companies/ecosio/remote-full-stack-developer-java-react-120706",
-      "location": "Austria, Spain, UK, Italy, Hungary, Portugal, Croatia - Remote",
-      "remote": true,
-      "tags": [
-        "Web App Development",
-        "intern",
-        "react",
-        "typescript",
-        "javascript",
-        "full stack",
-        "frontend",
-        "backend",
-        "home office"
-      ],
-      "source": "arbeitnow",
-      "published_at": "2026-10-31T18:55:28.000Z"
-    },
     {
       "id": "remotive-2091165",
       "title": "Full-Stack Developer",
