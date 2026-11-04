@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-03T18:11:09.539Z",
-  "count": 11,
+  "updated_at": "2026-11-04T18:21:54.444Z",
+  "count": 12,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -61,6 +61,26 @@
     ]
   },
   "jobs": [
+    {
+      "id": "arbeitnow-python-django-entwickler-fullstack-rest-ci-cd-stuttgart-166406",
+      "title": "Python / Django Entwickler (m/w/d) – Fullstack, REST, CI/CD",
+      "company": "Rockstardevelopers GmbH",
+      "url": "https://www.arbeitnow.com/jobs/companies/rockstardevelopers-gmbh/python-django-entwickler-fullstack-rest-ci-cd-stuttgart-166406",
+      "location": "Stuttgart",
+      "remote": true,
+      "tags": [
+        "Remote",
+        "Software Development",
+        "Unbefristeter arbeitsvertrag",
+        "berufserfahren",
+        "javascript",
+        "python",
+        "fullstack",
+        "frontend"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-11-04T15:30:58.000Z"
+    },
     {
       "id": "remotive-2091165",
       "title": "Full-Stack Developer",
