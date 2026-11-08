@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-07T16:42:48.239Z",
-  "count": 11,
+  "updated_at": "2026-11-08T16:52:54.992Z",
+  "count": 12,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -61,6 +61,30 @@
     ]
   },
   "jobs": [
+    {
+      "id": "github-backend-br-vagas-12493",
+      "title": "Desenvolvedor(a) Back-end Júnior - Python / AI Coding & Agentic AI",
+      "company": "MKdigital",
+      "url": "https://github.com/backend-br/vagas/issues/12493",
+      "location": "Remoto",
+      "remote": true,
+      "tags": [
+        "PJ",
+        "Júnior",
+        "JavaScript",
+        "Python",
+        "Remoto",
+        "Testes automatizados",
+        "TypeScript",
+        "PostgreSQL",
+        "junior",
+        "júnior",
+        "typescript",
+        "javascript"
+      ],
+      "source": "github",
+      "published_at": "2026-11-07T20:58:13Z"
+    },
     {
       "id": "remotive-2091165",
       "title": "Full-Stack Developer",
