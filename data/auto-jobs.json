@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-08T16:52:54.992Z",
-  "count": 12,
+  "updated_at": "2026-11-09T21:13:52.489Z",
+  "count": 13,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -61,6 +61,26 @@
     ]
   },
   "jobs": [
+    {
+      "id": "arbeitnow-java-fullstack-software-engineer-spring-boot-angular-bern-241500",
+      "title": "Java Fullstack Software Engineer (Spring Boot / Angular)",
+      "company": "Coopers Group AG",
+      "url": "https://www.arbeitnow.ch/jobs/companies/coopers-group-ag/java-fullstack-software-engineer-spring-boot-angular-bern-241500",
+      "location": "Bern",
+      "remote": true,
+      "tags": [
+        "Remote",
+        "Software Development",
+        "Interim",
+        "interim",
+        "berufserfahren",
+        "fullstack",
+        "frontend",
+        "backend"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-11-09T11:01:03.000Z"
+    },
     {
       "id": "github-backend-br-vagas-12493",
       "title": "Desenvolvedor(a) Back-end Júnior - Python / AI Coding & Agentic AI",
@@ -236,6 +256,7 @@
       "location": "",
       "remote": true,
       "tags": [
+        "stale",
         "frontend",
         "remoto"
       ],
