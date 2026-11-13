@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-12T18:39:34.100Z",
-  "count": 12,
+  "updated_at": "2026-11-13T18:19:17.693Z",
+  "count": 14,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -62,6 +62,30 @@
   },
   "jobs": [
     {
+      "id": "arbeitnow-werkstudentin-softwareentwicklung-nodejs-berlin-348304",
+      "title": "Werkstudent:in Softwareentwicklung Node.js (m/w/d)",
+      "company": "refundrebel",
+      "url": "https://www.arbeitnow.com/jobs/companies/refundrebel/werkstudentin-softwareentwicklung-nodejs-berlin-348304",
+      "location": "Berlin",
+      "remote": true,
+      "tags": [
+        "Remote",
+        "Software Development",
+        "Werkstudent",
+        "working student",
+        "hilfstätigkeit / student",
+        "intern",
+        "react",
+        "node",
+        "typescript",
+        "javascript",
+        "frontend",
+        "backend"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-11-13T13:31:08.000Z"
+    },
+    {
       "id": "github-backend-br-vagas-12493",
       "title": "Desenvolvedor(a) Back-end Júnior - Python / AI Coding & Agentic AI",
       "company": "MKdigital",
@@ -110,6 +134,30 @@
       "published_at": "2026-10-29T18:22:41"
     },
     {
+      "id": "github-backend-br-vagas-12474",
+      "title": "Back-end Developer JR",
+      "company": "PORT LOUIS",
+      "url": "https://github.com/backend-br/vagas/issues/12474",
+      "location": "Remoto",
+      "remote": true,
+      "tags": [
+        "CLT",
+        "Júnior",
+        "Remoto",
+        "AWS",
+        "MySQL",
+        "TypeScript",
+        "PostgreSQL",
+        "formato-sugerido",
+        "junior",
+        "júnior",
+        "jr",
+        "typescript"
+      ],
+      "source": "github",
+      "published_at": "2026-10-19T20:18:45Z"
+    },
+    {
       "id": "github-frontendbr-vagas-8571",
       "title": "It Jobs",
       "company": "Strider/ Micro 1",
@@ -135,6 +183,7 @@
         "Remoto",
         "GCP",
         "verificada",
+        "link-quebrado",
         "formato-sugerido",
         "python",
         "remoto"
