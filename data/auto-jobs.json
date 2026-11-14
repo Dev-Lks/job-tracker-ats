@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-13T18:19:17.693Z",
-  "count": 14,
+  "updated_at": "2026-11-14T16:48:07.611Z",
+  "count": 13,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -61,30 +61,6 @@
     ]
   },
   "jobs": [
-    {
-      "id": "arbeitnow-werkstudentin-softwareentwicklung-nodejs-berlin-348304",
-      "title": "Werkstudent:in Softwareentwicklung Node.js (m/w/d)",
-      "company": "refundrebel",
-      "url": "https://www.arbeitnow.com/jobs/companies/refundrebel/werkstudentin-softwareentwicklung-nodejs-berlin-348304",
-      "location": "Berlin",
-      "remote": true,
-      "tags": [
-        "Remote",
-        "Software Development",
-        "Werkstudent",
-        "working student",
-        "hilfstätigkeit / student",
-        "intern",
-        "react",
-        "node",
-        "typescript",
-        "javascript",
-        "frontend",
-        "backend"
-      ],
-      "source": "arbeitnow",
-      "published_at": "2026-11-13T13:31:08.000Z"
-    },
     {
       "id": "github-backend-br-vagas-12493",
       "title": "Desenvolvedor(a) Back-end Júnior - Python / AI Coding & Agentic AI",
