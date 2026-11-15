@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14T16:48:07.611Z",
+  "updated_at": "2026-11-15T17:30:34.640Z",
   "count": 13,
   "filters": {
     "remoteOnly": true,
@@ -159,7 +159,6 @@
         "Remoto",
         "GCP",
         "verificada",
-        "link-quebrado",
         "formato-sugerido",
         "python",
         "remoto"
