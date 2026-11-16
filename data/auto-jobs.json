@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-15T17:30:34.640Z",
-  "count": 13,
+  "updated_at": "2026-11-16T20:45:22.881Z",
+  "count": 12,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -159,6 +159,7 @@
         "Remoto",
         "GCP",
         "verificada",
+        "link-quebrado",
         "formato-sugerido",
         "python",
         "remoto"
@@ -251,21 +252,6 @@
       ],
       "source": "github",
       "published_at": "2026-09-17T18:59:30Z"
-    },
-    {
-      "id": "github-react-brasil-vagas-3019",
-      "title": "Frontend Engineer",
-      "company": "Botcity",
-      "url": "https://github.com/react-brasil/vagas/issues/3019",
-      "location": "",
-      "remote": true,
-      "tags": [
-        "stale",
-        "frontend",
-        "remoto"
-      ],
-      "source": "github",
-      "published_at": "2026-07-10T20:36:53Z"
     },
     {
       "id": "github-backend-br-vagas-12245",
