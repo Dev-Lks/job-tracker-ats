@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-17T19:30:05.523Z",
-  "count": 14,
+  "updated_at": "2026-11-18T19:12:55.673Z",
+  "count": 13,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -62,21 +62,24 @@
   },
   "jobs": [
     {
-      "id": "arbeitnow-ai-full-stack-developer-berlin-326366",
-      "title": "AI Full-Stack Developer (m/w/d)",
-      "company": "NEON Software Solutions",
-      "url": "https://www.arbeitnow.com/jobs/companies/neon-software-solutions/ai-full-stack-developer-berlin-326366",
+      "id": "arbeitnow-working-student-data-engineer-python-sql-cloud-platforms-berlin-454463",
+      "title": "Working Student Data Engineer – Python, SQL & Cloud Platforms",
+      "company": "AgentixLake GmbH",
+      "url": "https://www.arbeitnow.com/jobs/companies/agentixlake-gmbh/working-student-data-engineer-python-sql-cloud-platforms-berlin-454463",
       "location": "Berlin",
       "remote": true,
       "tags": [
         "Remote",
-        "Software Development",
-        "Unbefristeter arbeitsvertrag",
-        "berufserfahren",
-        "full-stack"
+        "Data Processing",
+        "Data Engineer",
+        "Working student",
+        "working student",
+        "no experience required / student",
+        "intern",
+        "python"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-11-17T17:00:50.000Z"
+      "published_at": "2026-11-18T17:00:45.000Z"
     },
     {
       "id": "github-backend-br-vagas-12493",
@@ -125,26 +128,6 @@
       ],
       "source": "remotive",
       "published_at": "2026-10-29T18:22:41"
-    },
-    {
-      "id": "arbeitnow-fullstack-consultant-berlin-242145",
-      "title": "Fullstack Consultant",
-      "company": "FourEnergy GmbH",
-      "url": "https://www.arbeitnow.com/jobs/companies/fourenergy-gmbh/fullstack-consultant-berlin-242145",
-      "location": "Berlin",
-      "remote": true,
-      "tags": [
-        "Remote",
-        "Software Development",
-        "Unbefristeter arbeitsvertrag",
-        "berufserfahren",
-        "react",
-        "fullstack",
-        "frontend",
-        "backend"
-      ],
-      "source": "arbeitnow",
-      "published_at": "2026-11-17T15:31:06.000Z"
     },
     {
       "id": "github-backend-br-vagas-12474",
