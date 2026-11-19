@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-18T19:12:55.673Z",
-  "count": 13,
+  "updated_at": "2026-11-19T19:16:50.817Z",
+  "count": 12,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -61,26 +61,6 @@
     ]
   },
   "jobs": [
-    {
-      "id": "arbeitnow-working-student-data-engineer-python-sql-cloud-platforms-berlin-454463",
-      "title": "Working Student Data Engineer – Python, SQL & Cloud Platforms",
-      "company": "AgentixLake GmbH",
-      "url": "https://www.arbeitnow.com/jobs/companies/agentixlake-gmbh/working-student-data-engineer-python-sql-cloud-platforms-berlin-454463",
-      "location": "Berlin",
-      "remote": true,
-      "tags": [
-        "Remote",
-        "Data Processing",
-        "Data Engineer",
-        "Working student",
-        "working student",
-        "no experience required / student",
-        "intern",
-        "python"
-      ],
-      "source": "arbeitnow",
-      "published_at": "2026-11-18T17:00:45.000Z"
-    },
     {
       "id": "github-backend-br-vagas-12493",
       "title": "Desenvolvedor(a) Back-end Júnior - Python / AI Coding & Agentic AI",
@@ -179,7 +159,6 @@
         "Remoto",
         "GCP",
         "verificada",
-        "link-quebrado",
         "formato-sugerido",
         "python",
         "remoto"
@@ -254,6 +233,7 @@
       "location": "",
       "remote": true,
       "tags": [
+        "Stale",
         "remoto"
       ],
       "source": "github",
