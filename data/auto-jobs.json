@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-19T19:16:50.817Z",
-  "count": 12,
+  "updated_at": "2026-11-20T18:55:37.865Z",
+  "count": 14,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -62,6 +62,23 @@
   },
   "jobs": [
     {
+      "id": "arbeitnow-ai-full-stack-developer-berlin-465878",
+      "title": "AI Full-Stack Developer (m/w/d)",
+      "company": "NEON Software Solutions",
+      "url": "https://www.arbeitnow.com/jobs/companies/neon-software-solutions/ai-full-stack-developer-berlin-465878",
+      "location": "Berlin",
+      "remote": true,
+      "tags": [
+        "Remote",
+        "Software Development",
+        "Unbefristeter arbeitsvertrag",
+        "berufserfahren",
+        "full-stack"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-11-20T16:31:08.000Z"
+    },
+    {
       "id": "github-backend-br-vagas-12493",
       "title": "Desenvolvedor(a) Back-end Júnior - Python / AI Coding & Agentic AI",
       "company": "MKdigital",
@@ -108,6 +125,25 @@
       ],
       "source": "remotive",
       "published_at": "2026-10-29T18:22:41"
+    },
+    {
+      "id": "arbeitnow-backend-entwicklerin-munich-378173",
+      "title": "Backend Entwickler:in (m/w/d)",
+      "company": "Biz Factory GmbH",
+      "url": "https://www.arbeitnow.com/jobs/companies/biz-factory-gmbh/backend-entwicklerin-munich-378173",
+      "location": "Munich",
+      "remote": true,
+      "tags": [
+        "Remote",
+        "Software Development",
+        "Unbefristeter arbeitsvertrag",
+        "berufserfahren",
+        "python",
+        "backend",
+        "home office"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-11-20T12:31:01.000Z"
     },
     {
       "id": "github-backend-br-vagas-12474",
