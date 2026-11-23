@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-22T18:10:08.973Z",
+  "updated_at": "2026-11-23T22:21:27.556Z",
   "count": 13,
   "filters": {
     "remoteOnly": true,
@@ -62,23 +62,27 @@
   },
   "jobs": [
     {
-      "id": "arbeitnow-remote-backend-software-developer-hilversum-417173",
-      "title": "Backend Software Developer",
-      "company": "Dawn Technology",
-      "url": "https://www.arbeitnow.nl/jobs/companies/dawn-technology/remote-backend-software-developer-hilversum-417173",
-      "location": "Werken op afstand",
+      "id": "arbeitnow-founding-full-stack-engineer-berlin-304822",
+      "title": "Founding Full-Stack Engineer",
+      "company": "planqor.ai",
+      "url": "https://www.arbeitnow.com/jobs/companies/planqorai/founding-full-stack-engineer-berlin-304822",
+      "location": "Berlin",
       "remote": true,
       "tags": [
-        "Dawn Technology",
         "Remote",
-        "Experienced",
-        "fulltime permanent",
-        "node",
+        "Software Development",
+        "Permanent employment",
+        "professional / experienced",
+        "intern",
+        "react",
         "typescript",
+        "python",
+        "full-stack",
+        "frontend",
         "backend"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-11-20T21:31:27.000Z"
+      "published_at": "2026-11-23T16:00:50.000Z"
     },
     {
       "id": "github-backend-br-vagas-12493",
