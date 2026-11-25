@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-24T20:57:22.830Z",
-  "count": 1,
+  "updated_at": "2026-11-25T20:19:38.499Z",
+  "count": 14,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -62,6 +62,52 @@
   },
   "jobs": [
     {
+      "id": "arbeitnow-remote-fullstack-software-engineer-core-engineering-469912",
+      "title": "Fullstack Software Engineer - Core Engineering",
+      "company": "dataiku",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/dataiku/remote-fullstack-software-engineer-core-engineering-469912",
+      "location": "Remote",
+      "remote": true,
+      "tags": [
+        "Engineering",
+        "junior",
+        "júnior",
+        "react",
+        "node",
+        "python",
+        "fullstack",
+        "frontend",
+        "backend",
+        "back-end"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-11-25T15:55:24.000Z"
+    },
+    {
+      "id": "github-backend-br-vagas-12493",
+      "title": "Desenvolvedor(a) Back-end Júnior - Python / AI Coding & Agentic AI",
+      "company": "MKdigital",
+      "url": "https://github.com/backend-br/vagas/issues/12493",
+      "location": "Remoto",
+      "remote": true,
+      "tags": [
+        "PJ",
+        "Júnior",
+        "JavaScript",
+        "Python",
+        "Remoto",
+        "Testes automatizados",
+        "TypeScript",
+        "PostgreSQL",
+        "junior",
+        "júnior",
+        "typescript",
+        "javascript"
+      ],
+      "source": "github",
+      "published_at": "2026-11-07T20:58:13Z"
+    },
+    {
       "id": "remotive-2091165",
       "title": "Full-Stack Developer",
       "company": "Fluence International, Inc.",
@@ -84,6 +130,209 @@
       ],
       "source": "remotive",
       "published_at": "2026-10-29T18:22:41"
+    },
+    {
+      "id": "arbeitnow-remote-fullstack-software-engineer-core-engineering-188174",
+      "title": "Fullstack Software Engineer - Core Engineering",
+      "company": "dataiku",
+      "url": "https://www.arbeitnow.fr/jobs/companies/dataiku/remote-fullstack-software-engineer-core-engineering-188174",
+      "location": "Remote",
+      "remote": true,
+      "tags": [
+        "Engineering",
+        "junior",
+        "júnior",
+        "react",
+        "node",
+        "python",
+        "fullstack",
+        "frontend",
+        "backend",
+        "back-end"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-11-25T15:55:24.000Z"
+    },
+    {
+      "id": "github-backend-br-vagas-12474",
+      "title": "Back-end Developer JR",
+      "company": "PORT LOUIS",
+      "url": "https://github.com/backend-br/vagas/issues/12474",
+      "location": "Remoto",
+      "remote": true,
+      "tags": [
+        "CLT",
+        "Júnior",
+        "Remoto",
+        "AWS",
+        "MySQL",
+        "TypeScript",
+        "PostgreSQL",
+        "formato-sugerido",
+        "junior",
+        "júnior",
+        "jr",
+        "typescript"
+      ],
+      "source": "github",
+      "published_at": "2026-10-19T20:18:45Z"
+    },
+    {
+      "id": "github-frontendbr-vagas-8571",
+      "title": "It Jobs",
+      "company": "Strider/ Micro 1",
+      "url": "https://github.com/frontendbr/vagas/issues/8571",
+      "location": "Remoto",
+      "remote": true,
+      "tags": [
+        "Remoto",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-10-19T16:48:53Z"
+    },
+    {
+      "id": "github-backend-br-vagas-12451",
+      "title": "Forward Deployed Engineer, Gen AI, Google Cloud (English, Portuguese) na Google",
+      "company": "Google",
+      "url": "https://github.com/backend-br/vagas/issues/12451",
+      "location": "Remoto",
+      "remote": true,
+      "tags": [
+        "Python",
+        "Remoto",
+        "GCP",
+        "verificada",
+        "formato-sugerido",
+        "python",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-10-14T20:28:54Z"
+    },
+    {
+      "id": "github-backend-br-vagas-12444",
+      "title": "Dev java junior",
+      "company": "DB1",
+      "url": "https://github.com/backend-br/vagas/issues/12444",
+      "location": "Remoto",
+      "remote": true,
+      "tags": [
+        "CLT",
+        "Júnior",
+        "Java",
+        "Remoto",
+        "MongoDB",
+        "PostgreSQL",
+        "RabbitMQ",
+        "Docker",
+        "junior",
+        "júnior",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-10-13T19:51:25Z"
+    },
+    {
+      "id": "github-frontendbr-vagas-8566",
+      "title": "Full-stack Engineer React.js • UX Design • Node.js",
+      "company": "Strider",
+      "url": "https://github.com/frontendbr/vagas/issues/8566",
+      "location": "",
+      "remote": true,
+      "tags": [
+        "react",
+        "node",
+        "full-stack",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-10-07T14:03:28Z"
+    },
+    {
+      "id": "github-backend-br-vagas-12432",
+      "title": "Back-end developer Net-",
+      "company": "Strider",
+      "url": "https://github.com/backend-br/vagas/issues/12432",
+      "location": "Remoto",
+      "remote": true,
+      "tags": [
+        ".NET",
+        "Remoto",
+        "SQL",
+        "C#",
+        "verificada",
+        "formato-sugerido",
+        "back-end",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-09-23T17:03:05Z"
+    },
+    {
+      "id": "github-androiddevbr-vagas-2248",
+      "title": "Mobile Engineer",
+      "company": "",
+      "url": "https://github.com/androiddevbr/vagas/issues/2248",
+      "location": "",
+      "remote": true,
+      "tags": [
+        "Stale",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-09-19T13:49:29Z"
+    },
+    {
+      "id": "github-frontendbr-vagas-8563",
+      "title": "Back-end Engineer. Net",
+      "company": "",
+      "url": "https://github.com/frontendbr/vagas/issues/8563",
+      "location": "",
+      "remote": true,
+      "tags": [
+        "back-end",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-09-17T18:59:30Z"
+    },
+    {
+      "id": "github-backend-br-vagas-12245",
+      "title": "Full-stack Engineer",
+      "company": "",
+      "url": "https://github.com/backend-br/vagas/issues/12245",
+      "location": "Remoto · ASP",
+      "remote": true,
+      "tags": [
+        ".NET",
+        "Remoto",
+        "AWS",
+        "SQL",
+        "Git",
+        "ASP",
+        "CI/CD",
+        "verificada",
+        "react",
+        "full-stack",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-05-25T16:54:47Z"
+    },
+    {
+      "id": "github-phpdevbr-vagas-1323",
+      "title": "Backend Developer PHP/Laravel na Coodesh",
+      "company": "Coodesh",
+      "url": "https://github.com/phpdevbr/vagas/issues/1323",
+      "location": "",
+      "remote": true,
+      "tags": [
+        "backend",
+        "remoto"
+      ],
+      "source": "github",
+      "published_at": "2026-01-13T14:23:29Z"
     }
   ]
 }
