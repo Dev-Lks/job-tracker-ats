@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-25T20:19:38.499Z",
-  "count": 14,
+  "updated_at": "2026-11-26T19:56:08.025Z",
+  "count": 11,
   "filters": {
     "remoteOnly": true,
     "keywords": [
@@ -62,28 +62,6 @@
   },
   "jobs": [
     {
-      "id": "arbeitnow-remote-fullstack-software-engineer-core-engineering-469912",
-      "title": "Fullstack Software Engineer - Core Engineering",
-      "company": "dataiku",
-      "url": "https://www.arbeitnow.co.uk/jobs/companies/dataiku/remote-fullstack-software-engineer-core-engineering-469912",
-      "location": "Remote",
-      "remote": true,
-      "tags": [
-        "Engineering",
-        "junior",
-        "júnior",
-        "react",
-        "node",
-        "python",
-        "fullstack",
-        "frontend",
-        "backend",
-        "back-end"
-      ],
-      "source": "arbeitnow",
-      "published_at": "2026-11-25T15:55:24.000Z"
-    },
-    {
       "id": "github-backend-br-vagas-12493",
       "title": "Desenvolvedor(a) Back-end Júnior - Python / AI Coding & Agentic AI",
       "company": "MKdigital",
@@ -130,28 +108,6 @@
       ],
       "source": "remotive",
       "published_at": "2026-10-29T18:22:41"
-    },
-    {
-      "id": "arbeitnow-remote-fullstack-software-engineer-core-engineering-188174",
-      "title": "Fullstack Software Engineer - Core Engineering",
-      "company": "dataiku",
-      "url": "https://www.arbeitnow.fr/jobs/companies/dataiku/remote-fullstack-software-engineer-core-engineering-188174",
-      "location": "Remote",
-      "remote": true,
-      "tags": [
-        "Engineering",
-        "junior",
-        "júnior",
-        "react",
-        "node",
-        "python",
-        "fullstack",
-        "frontend",
-        "backend",
-        "back-end"
-      ],
-      "source": "arbeitnow",
-      "published_at": "2026-11-25T15:55:24.000Z"
     },
     {
       "id": "github-backend-br-vagas-12474",
@@ -268,20 +224,6 @@
       ],
       "source": "github",
       "published_at": "2026-09-23T17:03:05Z"
-    },
-    {
-      "id": "github-androiddevbr-vagas-2248",
-      "title": "Mobile Engineer",
-      "company": "",
-      "url": "https://github.com/androiddevbr/vagas/issues/2248",
-      "location": "",
-      "remote": true,
-      "tags": [
-        "Stale",
-        "remoto"
-      ],
-      "source": "github",
-      "published_at": "2026-09-19T13:49:29Z"
     },
     {
       "id": "github-frontendbr-vagas-8563",
