@@ -1,24 +1,30 @@
 {
-  "_comment": "Filtros do scraper (scripts/scrape.mjs). Edite e rode 'node scripts/scrape.mjs' ou dispare o workflow. Env vars SCRAPE_* sobrescrevem estes valores.",
+  "_comment": "Filtros do scraper (scripts/scrape.mjs) focados em Estágio / Júnior Backend Java. Edite e rode 'node scripts/scrape.mjs' ou dispare o workflow.",
   "keywords": [
     "estágio", "estagio", "intern", "internship", "trainee",
     "junior", "júnior", "jr", "entry-level", "entry level",
-    "react", "node", "typescript", "javascript", "python",
-    "fullstack", "full-stack", "full stack", "frontend", "front-end", "front end",
-    "backend", "back-end", "back end",
-    "home office", "remoto", "remota"
+    "java", "spring", "spring boot", "springboot", "jpa", "hibernate",
+    "maven", "gradle", "junit", "postgresql", "sql", "docker",
+    "backend", "back-end", "back end", "api rest", "microsserviços",
+    "home office", "remoto", "remota", "híbrido", "hibrido"
   ],
   "excludeKeywords": [
     "senior", "sênior", "sr", "staff", "principal",
     "lead", "manager", "pleno", "mid-level", "mid level",
     "director", "diretor", "head", "vp", "chief", "founder",
-    "gerente", "architect", "arquiteto"
+    "gerente", "architect", "arquiteto", "especialista"
   ],
-  "remoteOnly": true,
+  "remoteOnly": false,
   "sources": ["github", "remotive", "arbeitnow", "adzuna"],
-  "remotiveCategories": ["software-dev", "data", "devops"],
-  "githubRepos": ["frontendbr/vagas", "backend-br/vagas", "react-brasil/vagas", "phpdevbr/vagas", "androiddevbr/vagas"],
-  "botQueries": ["react intern", "estágio frontend", "desenvolvedor júnior", "estágio backend python"],
+  "remotiveCategories": ["software-dev"],
+  "githubRepos": ["soujava/vagas", "backend-br/vagas", "qa-brasil/vagas"],
+  "botQueries": [
+    "estágio java",
+    "estagio backend java",
+    "estágio spring boot",
+    "desenvolvedor java júnior",
+    "java backend intern"
+  ],
   "botMaxPages": 3,
   "limit": 100
 }
