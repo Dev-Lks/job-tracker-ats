@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-11-26T19:56:08.025Z",
-  "count": 11,
+  "updated_at": "2026-11-27T19:45:11.088Z",
+  "count": 20,
   "filters": {
-    "remoteOnly": true,
+    "remoteOnly": false,
     "keywords": [
       "estágio",
       "estagio",
@@ -14,23 +14,28 @@
       "jr",
       "entry-level",
       "entry level",
-      "react",
-      "node",
-      "typescript",
-      "javascript",
-      "python",
-      "fullstack",
-      "full-stack",
-      "full stack",
-      "frontend",
-      "front-end",
-      "front end",
+      "java",
+      "spring",
+      "spring boot",
+      "springboot",
+      "jpa",
+      "hibernate",
+      "maven",
+      "gradle",
+      "junit",
+      "postgresql",
+      "sql",
+      "docker",
       "backend",
       "back-end",
       "back end",
+      "api rest",
+      "microsserviços",
       "home office",
       "remoto",
-      "remota"
+      "remota",
+      "híbrido",
+      "hibrido"
     ],
     "exclude": [
       "senior",
@@ -51,7 +56,8 @@
       "founder",
       "gerente",
       "architect",
-      "arquiteto"
+      "arquiteto",
+      "especialista"
     ],
     "sources": [
       "github",
@@ -61,6 +67,24 @@
     ]
   },
   "jobs": [
+    {
+      "id": "arbeitnow-junior-data-engineer-london-or-glasgow-430291",
+      "title": "Junior Data Engineer – London OR Glasgow",
+      "company": "Mthreerecruitingportal",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/mthreerecruitingportal/junior-data-engineer-london-or-glasgow-430291",
+      "location": "",
+      "remote": false,
+      "tags": [
+        "Graduate - Technology",
+        "intern",
+        "internship",
+        "junior",
+        "júnior",
+        "sql"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-11-27T15:55:26.000Z"
+    },
     {
       "id": "github-backend-br-vagas-12493",
       "title": "Desenvolvedor(a) Back-end Júnior - Python / AI Coding & Agentic AI",
@@ -79,35 +103,29 @@
         "PostgreSQL",
         "junior",
         "júnior",
-        "typescript",
-        "javascript"
+        "java",
+        "postgresql"
       ],
       "source": "github",
       "published_at": "2026-11-07T20:58:13Z"
     },
     {
-      "id": "remotive-2091165",
-      "title": "Full-Stack Developer",
-      "company": "Fluence International, Inc.",
-      "url": "https://remotive.com/remote-jobs/software-development/full-stack-developer-2091165",
-      "location": "Worldwide",
-      "remote": true,
+      "id": "arbeitnow-junior-data-engineer-london-or-glasgow-414557",
+      "title": "Junior Data Engineer – London or Glasgow",
+      "company": "Mthreerecruitingportal",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/mthreerecruitingportal/junior-data-engineer-london-or-glasgow-414557",
+      "location": "",
+      "remote": false,
       "tags": [
-        "admin",
-        "api",
-        "AWS",
-        "backend",
-        "cloud",
-        "docker",
-        "frontend",
-        "fullstack",
-        "javascript",
-        "react",
-        "security",
-        "UI/UX"
+        "Graduate - Technology",
+        "intern",
+        "internship",
+        "junior",
+        "júnior",
+        "sql"
       ],
-      "source": "remotive",
-      "published_at": "2026-10-29T18:22:41"
+      "source": "arbeitnow",
+      "published_at": "2026-11-27T15:55:26.000Z"
     },
     {
       "id": "github-backend-br-vagas-12474",
@@ -128,24 +146,220 @@
         "junior",
         "júnior",
         "jr",
-        "typescript"
+        "postgresql"
       ],
       "source": "github",
       "published_at": "2026-10-19T20:18:45Z"
     },
     {
-      "id": "github-frontendbr-vagas-8571",
-      "title": "It Jobs",
-      "company": "Strider/ Micro 1",
-      "url": "https://github.com/frontendbr/vagas/issues/8571",
-      "location": "Remoto",
-      "remote": true,
+      "id": "arbeitnow-junior-data-engineer-london-glasgow-423381",
+      "title": "Junior Data Engineer – London, Glasgow",
+      "company": "Mthreerecruitingportal",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/mthreerecruitingportal/junior-data-engineer-london-glasgow-423381",
+      "location": "",
+      "remote": false,
       "tags": [
-        "Remoto",
-        "remoto"
+        "Graduate - Technology",
+        "intern",
+        "internship",
+        "junior",
+        "júnior",
+        "sql"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-11-27T15:55:26.000Z"
+    },
+    {
+      "id": "github-backend-br-vagas-12468",
+      "title": "Cloud Engineer, Application Modernization, Gemini Enterprise and AI Agents, Google Professional Services ( Spanish, English) na Google",
+      "company": "Google",
+      "url": "https://github.com/backend-br/vagas/issues/12468",
+      "location": "",
+      "remote": false,
+      "tags": [
+        "JavaScript",
+        "Python",
+        "Node.js",
+        "Java",
+        "Go",
+        "Git",
+        "Linux",
+        "Kubernetes",
+        "java"
       ],
       "source": "github",
-      "published_at": "2026-10-19T16:48:53Z"
+      "published_at": "2026-10-14T21:02:00Z"
+    },
+    {
+      "id": "arbeitnow-junior-data-engineer-london-glasgow-173103",
+      "title": "Junior Data Engineer – London, Glasgow",
+      "company": "Mthreerecruitingportal",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/mthreerecruitingportal/junior-data-engineer-london-glasgow-173103",
+      "location": "",
+      "remote": false,
+      "tags": [
+        "Graduate - Technology",
+        "intern",
+        "internship",
+        "junior",
+        "júnior",
+        "sql"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-11-27T15:55:26.000Z"
+    },
+    {
+      "id": "github-backend-br-vagas-12461",
+      "title": "Data Engineer, YouTube Marketing na Google",
+      "company": "Google",
+      "url": "https://github.com/backend-br/vagas/issues/12461",
+      "location": "",
+      "remote": false,
+      "tags": [
+        "JavaScript",
+        "Python",
+        "Java",
+        "Go",
+        "MongoDB",
+        "C++",
+        "verificada",
+        "link-quebrado",
+        "java"
+      ],
+      "source": "github",
+      "published_at": "2026-10-14T20:46:23Z"
+    },
+    {
+      "id": "arbeitnow-data-bi-intern-amsterdam-269559",
+      "title": "Data & BI Intern",
+      "company": "Creative Clicks B.V.",
+      "url": "https://www.arbeitnow.nl/jobs/companies/creative-clicks-bv/data-bi-intern-amsterdam-269559",
+      "location": "Amsterdam, Noord-Holland, Netherlands",
+      "remote": false,
+      "tags": [
+        "Movion",
+        "Student college",
+        "internship",
+        "intern",
+        "sql"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-11-27T15:31:27.000Z"
+    },
+    {
+      "id": "github-backend-br-vagas-12460",
+      "title": "Early Career Software Engineer, People with Disabilities na Google",
+      "company": "Google",
+      "url": "https://github.com/backend-br/vagas/issues/12460",
+      "location": "",
+      "remote": false,
+      "tags": [
+        "JavaScript",
+        "Python",
+        "Java",
+        "C++",
+        "verificada",
+        "formato-sugerido",
+        "java"
+      ],
+      "source": "github",
+      "published_at": "2026-10-14T20:44:39Z"
+    },
+    {
+      "id": "arbeitnow-software-engineer-java-security-amsterdam-78497",
+      "title": "Software Engineer (Java) - Security",
+      "company": "Teampicnic",
+      "url": "https://www.arbeitnow.nl/jobs/companies/teampicnic/software-engineer-java-security-amsterdam-78497",
+      "location": "Amsterdam",
+      "remote": false,
+      "tags": [
+        "Engineering",
+        "intern",
+        "java",
+        "spring",
+        "spring boot",
+        "maven",
+        "postgresql",
+        "docker"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-11-27T06:55:32.000Z"
+    },
+    {
+      "id": "github-backend-br-vagas-12453",
+      "title": "Software Engineer, Early Career (For Women in Tech Candidates) na Google",
+      "company": "Google",
+      "url": "https://github.com/backend-br/vagas/issues/12453",
+      "location": "",
+      "remote": false,
+      "tags": [
+        "JavaScript",
+        "Python",
+        "Java",
+        "C++",
+        "verificada",
+        "formato-sugerido",
+        "java"
+      ],
+      "source": "github",
+      "published_at": "2026-10-14T20:34:32Z"
+    },
+    {
+      "id": "arbeitnow-junior-business-controller-data-specialist-almere-394785",
+      "title": "Junior Business Controller (Data specialist)",
+      "company": "HG International b.v.",
+      "url": "https://www.arbeitnow.nl/jobs/companies/hg-international-bv/junior-business-controller-data-specialist-almere-394785",
+      "location": "Almere, Flevoland, Nederland",
+      "remote": false,
+      "tags": [
+        "Finance",
+        "Mid",
+        "fulltime fixed term",
+        "intern",
+        "junior",
+        "júnior",
+        "sql"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-11-26T09:31:21.000Z"
+    },
+    {
+      "id": "github-backend-br-vagas-12452",
+      "title": "Cloud Data and Analytics Consultant, Professional Services (English, Portuguese, Spanish) na Google",
+      "company": "Google",
+      "url": "https://github.com/backend-br/vagas/issues/12452",
+      "location": "",
+      "remote": false,
+      "tags": [
+        "JavaScript",
+        "Python",
+        "Java",
+        "Go",
+        "Scala",
+        "GCP",
+        "C++",
+        "verificada",
+        "java"
+      ],
+      "source": "github",
+      "published_at": "2026-10-14T20:30:15Z"
+    },
+    {
+      "id": "arbeitnow-junior-data-consultant-amsterdam-151895",
+      "title": "Junior Data Consultant",
+      "company": "LOGEX",
+      "url": "https://www.arbeitnow.nl/jobs/companies/logex/junior-data-consultant-amsterdam-151895",
+      "location": "Amsterdam, Noord-Holland, Netherlands",
+      "remote": false,
+      "tags": [
+        "Entry",
+        "fulltime permanent",
+        "intern",
+        "junior",
+        "júnior"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-11-26T06:31:23.000Z"
     },
     {
       "id": "github-backend-br-vagas-12451",
@@ -160,7 +374,6 @@
         "GCP",
         "verificada",
         "formato-sugerido",
-        "python",
         "remoto"
       ],
       "source": "github",
@@ -184,26 +397,28 @@
         "Docker",
         "junior",
         "júnior",
-        "remoto"
+        "java",
+        "spring"
       ],
       "source": "github",
       "published_at": "2026-10-13T19:51:25Z"
     },
     {
-      "id": "github-frontendbr-vagas-8566",
+      "id": "github-backend-br-vagas-12440",
       "title": "Full-stack Engineer React.js • UX Design • Node.js",
       "company": "Strider",
-      "url": "https://github.com/frontendbr/vagas/issues/8566",
-      "location": "",
+      "url": "https://github.com/backend-br/vagas/issues/12440",
+      "location": "Remoto",
       "remote": true,
       "tags": [
-        "react",
-        "node",
-        "full-stack",
+        "Node.js",
+        "Remoto",
+        "verificada",
+        "formato-sugerido",
         "remoto"
       ],
       "source": "github",
-      "published_at": "2026-10-07T14:03:28Z"
+      "published_at": "2026-10-07T14:02:31Z"
     },
     {
       "id": "github-backend-br-vagas-12432",
@@ -219,25 +434,12 @@
         "C#",
         "verificada",
         "formato-sugerido",
+        "sql",
         "back-end",
         "remoto"
       ],
       "source": "github",
       "published_at": "2026-09-23T17:03:05Z"
-    },
-    {
-      "id": "github-frontendbr-vagas-8563",
-      "title": "Back-end Engineer. Net",
-      "company": "",
-      "url": "https://github.com/frontendbr/vagas/issues/8563",
-      "location": "",
-      "remote": true,
-      "tags": [
-        "back-end",
-        "remoto"
-      ],
-      "source": "github",
-      "published_at": "2026-09-17T18:59:30Z"
     },
     {
       "id": "github-backend-br-vagas-12245",
@@ -255,26 +457,11 @@
         "ASP",
         "CI/CD",
         "verificada",
-        "react",
-        "full-stack",
+        "sql",
         "remoto"
       ],
       "source": "github",
       "published_at": "2026-05-25T16:54:47Z"
-    },
-    {
-      "id": "github-phpdevbr-vagas-1323",
-      "title": "Backend Developer PHP/Laravel na Coodesh",
-      "company": "Coodesh",
-      "url": "https://github.com/phpdevbr/vagas/issues/1323",
-      "location": "",
-      "remote": true,
-      "tags": [
-        "backend",
-        "remoto"
-      ],
-      "source": "github",
-      "published_at": "2026-01-13T14:23:29Z"
     }
   ]
 }
