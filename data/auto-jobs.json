@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-27T19:45:11.088Z",
-  "count": 20,
+  "updated_at": "2026-11-28T18:37:00.842Z",
+  "count": 19,
   "filters": {
     "remoteOnly": false,
     "keywords": [
@@ -68,22 +68,19 @@
   },
   "jobs": [
     {
-      "id": "arbeitnow-junior-data-engineer-london-or-glasgow-430291",
-      "title": "Junior Data Engineer – London OR Glasgow",
-      "company": "Mthreerecruitingportal",
-      "url": "https://www.arbeitnow.co.uk/jobs/companies/mthreerecruitingportal/junior-data-engineer-london-or-glasgow-430291",
-      "location": "",
+      "id": "arbeitnow-data-scientist-intern-2027-london-61925",
+      "title": "Data Scientist Intern - 2027",
+      "company": "Wehrtyou",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/wehrtyou/data-scientist-intern-2027-london-61925",
+      "location": "London",
       "remote": false,
       "tags": [
-        "Graduate - Technology",
+        "Data",
         "intern",
-        "internship",
-        "junior",
-        "júnior",
-        "sql"
+        "internship"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-11-27T15:55:26.000Z"
+      "published_at": "2026-11-28T12:55:18.000Z"
     },
     {
       "id": "github-backend-br-vagas-12493",
@@ -110,64 +107,22 @@
       "published_at": "2026-11-07T20:58:13Z"
     },
     {
-      "id": "arbeitnow-junior-data-engineer-london-or-glasgow-414557",
-      "title": "Junior Data Engineer – London or Glasgow",
-      "company": "Mthreerecruitingportal",
-      "url": "https://www.arbeitnow.co.uk/jobs/companies/mthreerecruitingportal/junior-data-engineer-london-or-glasgow-414557",
-      "location": "",
+      "id": "arbeitnow-java-software-engineer-berlin-308317",
+      "title": "Java Software Engineer (m/w/d)",
+      "company": "Intus Workforce Solutions B.V.",
+      "url": "https://www.arbeitnow.com/jobs/companies/intus-workforce-solutions-bv/java-software-engineer-berlin-308317",
+      "location": "Berlin, Berlin, Germany",
       "remote": false,
       "tags": [
-        "Graduate - Technology",
+        "Swisio",
+        "Mid",
+        "fulltime permanent",
         "intern",
-        "internship",
-        "junior",
-        "júnior",
+        "java",
         "sql"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-11-27T15:55:26.000Z"
-    },
-    {
-      "id": "github-backend-br-vagas-12474",
-      "title": "Back-end Developer JR",
-      "company": "PORT LOUIS",
-      "url": "https://github.com/backend-br/vagas/issues/12474",
-      "location": "Remoto",
-      "remote": true,
-      "tags": [
-        "CLT",
-        "Júnior",
-        "Remoto",
-        "AWS",
-        "MySQL",
-        "TypeScript",
-        "PostgreSQL",
-        "formato-sugerido",
-        "junior",
-        "júnior",
-        "jr",
-        "postgresql"
-      ],
-      "source": "github",
-      "published_at": "2026-10-19T20:18:45Z"
-    },
-    {
-      "id": "arbeitnow-junior-data-engineer-london-glasgow-423381",
-      "title": "Junior Data Engineer – London, Glasgow",
-      "company": "Mthreerecruitingportal",
-      "url": "https://www.arbeitnow.co.uk/jobs/companies/mthreerecruitingportal/junior-data-engineer-london-glasgow-423381",
-      "location": "",
-      "remote": false,
-      "tags": [
-        "Graduate - Technology",
-        "intern",
-        "internship",
-        "junior",
-        "júnior",
-        "sql"
-      ],
-      "source": "arbeitnow",
-      "published_at": "2026-11-27T15:55:26.000Z"
+      "published_at": "2026-11-28T06:51:24.000Z"
     },
     {
       "id": "github-backend-br-vagas-12468",
@@ -191,22 +146,21 @@
       "published_at": "2026-10-14T21:02:00Z"
     },
     {
-      "id": "arbeitnow-junior-data-engineer-london-glasgow-173103",
-      "title": "Junior Data Engineer – London, Glasgow",
-      "company": "Mthreerecruitingportal",
-      "url": "https://www.arbeitnow.co.uk/jobs/companies/mthreerecruitingportal/junior-data-engineer-london-glasgow-173103",
-      "location": "",
+      "id": "arbeitnow-junior-data-ai-engineer-finance-amsterdam-39987",
+      "title": "Junior Data & AI Engineer (Finance)",
+      "company": "Prosus",
+      "url": "https://www.arbeitnow.nl/jobs/companies/prosus/junior-data-ai-engineer-finance-amsterdam-39987",
+      "location": "Amsterdam",
       "remote": false,
       "tags": [
-        "Graduate - Technology",
-        "intern",
-        "internship",
+        "Investment Org. - Finance",
+        "Full Time",
         "junior",
         "júnior",
         "sql"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-11-27T15:55:26.000Z"
+      "published_at": "2026-11-28T06:40:15.000Z"
     },
     {
       "id": "github-backend-br-vagas-12461",
@@ -230,21 +184,19 @@
       "published_at": "2026-10-14T20:46:23Z"
     },
     {
-      "id": "arbeitnow-data-bi-intern-amsterdam-269559",
-      "title": "Data & BI Intern",
-      "company": "Creative Clicks B.V.",
-      "url": "https://www.arbeitnow.nl/jobs/companies/creative-clicks-bv/data-bi-intern-amsterdam-269559",
-      "location": "Amsterdam, Noord-Holland, Netherlands",
+      "id": "arbeitnow-software-engineer-backend-london-168314",
+      "title": "Software Engineer (Backend) - London",
+      "company": "Teton",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/teton/software-engineer-backend-london-168314",
+      "location": "London",
       "remote": false,
       "tags": [
-        "Movion",
-        "Student college",
-        "internship",
-        "intern",
-        "sql"
+        "Engineering",
+        "Full Time",
+        "backend"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-11-27T15:31:27.000Z"
+      "published_at": "2026-11-28T06:40:12.000Z"
     },
     {
       "id": "github-backend-br-vagas-12460",
@@ -266,24 +218,19 @@
       "published_at": "2026-10-14T20:44:39Z"
     },
     {
-      "id": "arbeitnow-software-engineer-java-security-amsterdam-78497",
-      "title": "Software Engineer (Java) - Security",
-      "company": "Teampicnic",
-      "url": "https://www.arbeitnow.nl/jobs/companies/teampicnic/software-engineer-java-security-amsterdam-78497",
-      "location": "Amsterdam",
+      "id": "arbeitnow-software-engineer-product-backend-london-377954",
+      "title": "Software Engineer (Product Backend) - London",
+      "company": "Teton",
+      "url": "https://www.arbeitnow.co.uk/jobs/companies/teton/software-engineer-product-backend-london-377954",
+      "location": "London",
       "remote": false,
       "tags": [
         "Engineering",
-        "intern",
-        "java",
-        "spring",
-        "spring boot",
-        "maven",
-        "postgresql",
-        "docker"
+        "Full Time",
+        "backend"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-11-27T06:55:32.000Z"
+      "published_at": "2026-11-28T06:40:12.000Z"
     },
     {
       "id": "github-backend-br-vagas-12453",
@@ -305,23 +252,21 @@
       "published_at": "2026-10-14T20:34:32Z"
     },
     {
-      "id": "arbeitnow-junior-business-controller-data-specialist-almere-394785",
-      "title": "Junior Business Controller (Data specialist)",
-      "company": "HG International b.v.",
-      "url": "https://www.arbeitnow.nl/jobs/companies/hg-international-bv/junior-business-controller-data-specialist-almere-394785",
-      "location": "Almere, Flevoland, Nederland",
+      "id": "arbeitnow-data-engineer-intern-zurich-496199",
+      "title": "Data Engineer Intern",
+      "company": "Gravis Robotics",
+      "url": "https://www.arbeitnow.ch/jobs/companies/gravis-robotics/data-engineer-intern-zurich-496199",
+      "location": "Zurich",
       "remote": false,
       "tags": [
-        "Finance",
-        "Mid",
-        "fulltime fixed term",
+        "Platform",
         "intern",
-        "junior",
-        "júnior",
-        "sql"
+        "internship",
+        "sql",
+        "docker"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-11-26T09:31:21.000Z"
+      "published_at": "2026-11-28T03:07:39.000Z"
     },
     {
       "id": "github-backend-br-vagas-12452",
@@ -345,21 +290,25 @@
       "published_at": "2026-10-14T20:30:15Z"
     },
     {
-      "id": "arbeitnow-junior-data-consultant-amsterdam-151895",
-      "title": "Junior Data Consultant",
-      "company": "LOGEX",
-      "url": "https://www.arbeitnow.nl/jobs/companies/logex/junior-data-consultant-amsterdam-151895",
-      "location": "Amsterdam, Noord-Holland, Netherlands",
+      "id": "arbeitnow-applikations-entwickler-java-100-zurich-153637",
+      "title": "Applikations-Entwickler Java 100%",
+      "company": "Callista Group AG",
+      "url": "https://www.arbeitnow.ch/jobs/companies/callista-group-ag/applikations-entwickler-java-100-zurich-153637",
+      "location": "Zürich, Zürich, Switzerland",
       "remote": false,
       "tags": [
-        "Entry",
-        "fulltime permanent",
-        "intern",
-        "junior",
-        "júnior"
+        "Engineering",
+        "Experienced",
+        "temporary",
+        "java",
+        "spring",
+        "spring boot",
+        "jpa",
+        "hibernate",
+        "backend"
       ],
       "source": "arbeitnow",
-      "published_at": "2026-11-26T06:31:23.000Z"
+      "published_at": "2026-11-27T21:51:23.000Z"
     },
     {
       "id": "github-backend-br-vagas-12451",
@@ -373,11 +322,29 @@
         "Remoto",
         "GCP",
         "verificada",
+        "link-quebrado",
         "formato-sugerido",
         "remoto"
       ],
       "source": "github",
       "published_at": "2026-10-14T20:28:54Z"
+    },
+    {
+      "id": "arbeitnow-data-bi-intern-amsterdam-269559",
+      "title": "Data & BI Intern",
+      "company": "Creative Clicks B.V.",
+      "url": "https://www.arbeitnow.nl/jobs/companies/creative-clicks-bv/data-bi-intern-amsterdam-269559",
+      "location": "Amsterdam, Noord-Holland, Netherlands",
+      "remote": false,
+      "tags": [
+        "Movion",
+        "Student college",
+        "internship",
+        "intern",
+        "sql"
+      ],
+      "source": "arbeitnow",
+      "published_at": "2026-11-27T15:31:27.000Z"
     },
     {
       "id": "github-backend-br-vagas-12444",
